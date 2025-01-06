@@ -26,6 +26,7 @@ pre[class] {
 # Initializes the bibliography
 library(RefManageR)
 
+library(knitr)
 library(ggplot2)
 library(dplyr)
 library(readr)
@@ -503,7 +504,10 @@ Democracy and Growth
 ---
 ![image](sima2023d.png)
 ---
-![image](sima2023e.png)
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("sima2023e.PNG")
+```
 
 
 
