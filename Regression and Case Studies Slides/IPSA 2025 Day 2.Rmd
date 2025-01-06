@@ -280,19 +280,26 @@ Y_{i} & = \mu_{0} + D_{i} (\mu_{1} - \mu_{0}) + \mathbb{X}_{i} \beta + \{\nu_{0}
 
 
 ---
-![image](luputitleauthor.jpg)
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("luputitleauthor.jpg")
+```
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("lupu1.jpg")
+```
 
 
 ---
-![image](lupu1.jpg)
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("lupu2.jpg")
+```
 
 
 ---
-![image](lupu2.jpg)
-
-
----
-![image](lupu3.jpg)
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("lupu3.jpg")
+```
 
 
 ---
@@ -311,24 +318,21 @@ include_graphics("lupu4.jpg")
 
 
 ---
-<figure>
-<h3 id="aronow-and-samii-2016">Aronow and Samii 2016</h3>
-<img src="aronowsamii1.jpg" style="width:4.5in" />
-</figure>
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("aronowsamii1.jpg")
+```
 
 
 ---
-<figure>
-<h3 id="aronow-and-samii-2016-1">Aronow and Samii 2016</h3>
-<img src="aronowsamii2.jpg" style="width:4.5in" />
-</figure>
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("aronowsamii2.jpg")
+```
 
 
 ---
-<figure>
-<h3 id="aronow-and-samii-2016-2">Aronow and Samii 2016</h3>
-<img src="aronowsamii3.jpg" style="width:4.5in" />
-</figure>
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("aronowsamii3.jpg")
+```
 
 
 ---
