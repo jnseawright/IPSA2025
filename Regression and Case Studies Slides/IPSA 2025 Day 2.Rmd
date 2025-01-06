@@ -319,19 +319,19 @@ include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("aronowsamii1.jpg")
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/aronowsamii1.JPG")
 ```
 
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("aronowsamii2.jpg")
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/aronowsamii2.JPG")
 ```
 
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("aronowsamii3.jpg")
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/aronowsamii3.JPG")
 ```
 
 
