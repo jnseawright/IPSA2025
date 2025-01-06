@@ -1,0 +1,42 @@
+# Lab 1: Mixed-Method Research
+
+*Introduction to R*
+
+Since we will be using R for the quantitative and statistical components
+in this course, it is useful to explore the system. Please complete the
+following tutorial labs to start familiarizing yourself with how the
+system works.
+
+<https://openintrostat.github.io/oilabs-tidy/01_intro_to_r/intro_to_r.html>
+
+<https://openintrostat.github.io/oilabs-tidy/02_intro_to_data/intro_to_data.html>
+
+*Multi-Method Elements in Snow on Cholera*
+
+In 1855, the English epidemiologist, John Snow, published a book
+correctly identifying the mode of transmission of cholera. This book has
+subsequently become a paradigmatic case of successful causal inference
+for social science methodologists. The book is available online here:
+
+<https://www.ph.ucla.edu/epi/snow/snowbook.html>
+
+Please examine the study, identifying quantitative and qualitative
+components of the causal inference. (Note that statistics was not fully
+developed at the time, and so quantitative components may lack some
+features that we expect in contemporary research.) Focus primarily on
+Part 3 of the book.
+
+Explain what each component contributes to the causal inference. Does
+Snow's multi-method research make the causal inference more powerful
+than it would be as a purely quantitative study? If so, explain why.
+
+*From Triangulation to Integration*
+
+Find a small group of students to work with. Together, select a
+published article in an area that interests you that uses a
+triangulation multi-method design. What would have to change to turn
+this design into an integrative design? Be as specific as possible about
+how to rework the study using integrative multi-method design. In what
+ways would your proposed integrative version of the article be better
+than the original version? In what ways might it be weaker?
+
