@@ -296,8 +296,9 @@ Y_{i} & = \mu_{0} + D_{i} (\mu_{1} - \mu_{0}) + \mathbb{X}_{i} \beta + \{\nu_{0}
 
 
 ---
-![image](lupu4.jpg)
-
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("lupu4.jpg")
+```
 
 ---
 ### Heterogeneity
@@ -393,7 +394,10 @@ Democracy and Growth
 
 1.  Which independent variables should we use?
 
-![image](ivslide.jpg)
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("ivslide.jpg")
+```
+
 
 
 ---
