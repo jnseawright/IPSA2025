@@ -494,15 +494,26 @@ Democracy and Growth
     mean.
 
 ---
-![image](sima2023a.png)
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("sima2023a.PNG")
+```
 
 ---
-![image](sima2023b.png)
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("sima2023b.PNG")
+```
 ---
-![image](sima2023c.png)
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("sima2023c.PNG")
+```
 
 ---
-![image](sima2023d.png)
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("sima2023d.PNG")
+```
+
 ---
 
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
