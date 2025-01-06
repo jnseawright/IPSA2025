@@ -1,0 +1,61 @@
+# Lab 4: Mixed-Method Research
+
+*Inequality and Democracy, Again*
+
+Recall this regression from the second lab session:
+
+```{r, results='hide'}
+inequality <- read.csv("https://raw.githubusercontent.com/jnseawright/practice-of-multimethod/main/data/inequality.csv")
+
+ineqlm2 <- lm(Gini ~ Polity + log(GDP), data=inequality)
+summary(ineqlm2)
+```
+
+Devise a research plan for case-study analysis that could test key
+causal inference assumptions for this regression, using resources
+available to you from this lab. The two cases you should focus on are
+the Republic of Yemen and Zimbabwe. Describe the research you have
+designed to test each assumption of interest, carry out your plan, and
+discuss any modifications to the regression analysis that your research
+implies.
+
+
+*Design a Multi-Method Follow-Up*
+
+Access Chung, E., & Milkoreit, M. (2021). Who are your people? 
+The effect of political ideology and social identity on climate-related beliefs 
+and risk perceptions. Politics, Groups, and Identities, 11(3), 467–487. 
+<https://doi.org/10.1080/21565503.2021.1992287> Carefully determine what is being
+assumed in order to make the causal inferences that are made in this study. Which 
+assumptions of those assumptions could potentially be tested using in-depth interviews? 
+Design an in-depth interview schedule to test as
+many assumptions of the model as possible. For each part of the
+interview, explain what multi-method task it is intended to fulfill and
+clarify the qualitative causal inferential strategy connected with it.
+
+Now, find someone in the class and administer your interview. Take
+careful notes, analyze your results, and describe any issues for the
+model that arise from your interview. What next steps would you take if
+you wanted to pursue this line of research further?
+
+*Design a Multi-Method Follow-Up*
+
+Find a published regression-based study on a topic of your interest.
+Design a suite of qualitative research components to test the key
+assumptions behind causal inference for that study. Be as detailed as
+possible about the sorts of findings you will look for, the data sources
+you will draw on, and so forth. When you have completed work on your
+design, find a partner. Present your design to your partner, and also
+offer a constructive critique of your partner's design.
+
+*Discussion Questions*
+
+Find an example of research using regression in a way that you regard as
+successful from your area of research. What makes this application of
+regression successful? What is regression used for, what assumptions are
+needed, and to what extent do you regard the results as credible?
+
+What difference does it make for the qualitative part of multi-method
+causal inference when the cases under study are historical vs.
+contemporary? What about when they are individuals vs. organizations vs.
+countries?
