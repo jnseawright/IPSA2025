@@ -281,30 +281,30 @@ Y_{i} & = \mu_{0} + D_{i} (\mu_{1} - \mu_{0}) + \mathbb{X}_{i} \beta + \{\nu_{0}
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("luputitleauthor.jpg")
+include_graphics("luputitleauthor.JPG")
 ```
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("lupu1.jpg")
-```
-
-
----
-```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("lupu2.jpg")
+include_graphics("lupu1.JPG")
 ```
 
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("lupu3.jpg")
+include_graphics("lupu2.JPG")
 ```
 
 
 ---
 ```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
-include_graphics("lupu4.jpg")
+include_graphics("lupu3.JPG")
+```
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("lupu4.JPG")
 ```
 
 ---
