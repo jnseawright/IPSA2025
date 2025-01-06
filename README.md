@@ -14,8 +14,8 @@ Slides:
 
 Labs:
 
-* [Monday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA%202024%20Lab%201.pdf)
-* [Tuesday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA%202024%20Lab%202.pdf) 
+* [Monday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA-2025-Lab-1.html)
+* [Tuesday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA-2025-Lab-2.html) 
 * [Wednesday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA%202024%20Lab%203.pdf)
 * [Thursday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA%202024%20Lab%204.pdf)
 * [Friday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Labs/IPSA%202024%20Lab%205.pdf) 
