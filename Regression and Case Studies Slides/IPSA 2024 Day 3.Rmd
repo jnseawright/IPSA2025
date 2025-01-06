@@ -187,19 +187,26 @@ include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case
 
 
 ---
-![image](pt1.jpg){width="4in"}
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/pt1.JPG")
+```
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/pt2.JPG")
+```
 
 
 ---
-![image](pt2.jpg){width="4in"}
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/pt3.JPG")
+```
 
 
 ---
-![image](pt3.jpg){width="4in"}
-
-
----
-![image](ptaux.jpg){width="4in"}
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/ptaux.JPG")
+```
 
 
 ---
@@ -315,49 +322,50 @@ $$Y_{i,c} = Y_{j,c}$$
 
 
 ---
- center
- {#comparison1}
-   ![image](davidkoch.jpg){width="30%"}   ![image](johnmenardjr.jpg){width="30%"}
-  -------------------------------------- -----------------------------------------
 
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
 
-[]{#comparison1 label="comparison1"}
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/davidkoch.jpg")
 
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/johnmenardjr.jpg")
 
-
----
- center
- {#comparison1}
-     ![image](davidkoch.jpg){width="30%"}      ![image](johnmenardjr.jpg){width="30%"}
-  ------------------------------------------- -----------------------------------------
-   ![image](kochindustries.jpg){width="30%"}   ![image](menardsstore.png){width="30%"}
-
-
-[]{#comparison1 label="comparison1"}
-
-
+```
 
 ---
- center
- {#comparison1}
-   ![image](kochresidence.jpg){width="30%"}   ![image](menardhouse.jpg){width="30%"}
-  ------------------------------------------ ----------------------------------------
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
 
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/davidkoch.jpg")
 
-[]{#comparison1 label="comparison1"}
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/johnmenardjr.jpg")
 
+```
 
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/kochindustries.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/menardsstore.png")
+
+```
 
 ---
- center
- {#comparison1}
-   ![image](kochtheater.jpg){width="30%"}   ![image](menardracing.jpg){width="30%"}
-  ---------------------------------------- -----------------------------------------
 
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
 
-[]{#comparison1 label="comparison1"}
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/kochresidence.jpg")
 
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/menardhouse.jpg")
 
+```
+
+---
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/kochtheater.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/menardracing.jpg")
+
+```
 
 ---
 -   Conceptual innovation and clarification
