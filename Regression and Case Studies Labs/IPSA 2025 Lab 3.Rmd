@@ -1,0 +1,66 @@
+# Lab 3: Mixed-Method Research
+
+*Focus Group*
+
+Join a group of about 4 other students. Come up with (a) a causal
+question, (b) a main hypothesis for which students in this class are a
+part of the relevant population and a focus group could be a source of
+potentially useful causal process observations, and (c) a set of
+plausible alternative hypotheses. Think about possible implications of
+each hypothesis and devise questions and activities for your focus group
+to test at least some of those implications.
+
+Plan a focus group, preparing a list of questions, topics, or tasks that
+have a good chance of producing relevant causal-process observations.
+List these out explicitly, and explain your reasoning. Pair up with
+another group and carry out your focus group plan. Return the favor by
+also serving as a focus group for them.
+
+Now, with your group, carry out process tracing. Did the focus group
+produce evidence that fits your theory but is hard to explain given
+other theories, or not? Alternatively, did you discover ideas for new
+theories that you did not initially expect?
+
+How could a survey be most helpful in expanding on what you have
+learned?
+
+*Process Tracing Exercises*
+
+Process tracing is a pivotal methodology for multi-method research, and
+David Collier has developed a wonderful set of exercises for refining
+your understanding of process tracing. They are available at:
+
+<http://polisci.berkeley.edu/sites/default/files/people/u3827/Teaching%20Process%20Tracing.pdf>
+
+Please select at least three exercises that connect with topics of interest to you; 
+your TA can help you find ways to access difficult-to-locate readings.
+
+*Analyze a Case Study*
+
+Choose a published qualitative/case study analysis on a topic that
+interests you, and identify the elements of that case study that
+contribute to causal inference. After specifying the central causal
+hypothesis or hypotheses, please determine which components, if any, of
+the research design play each of the following roles.
+
+-   Help identify counterfactuals
+
+-   Carry out CPO tests
+
+-   Refine measurement
+
+-   Analyze causal flows
+
+-   Discover new variables
+
+*Formalize a Case Study*
+
+Our discussion of process tracing has drawn on Bayesian ideas, but has
+not gone all the way toward full formal Bayesian math. Would it be
+helpful for multi-method research if qualitative scholars fully
+formalized their research as Bayesian statistical problems, or would
+that get in the way of the qualitative scholarship?
+
+Try formalizing the case study that you analyzed in the previous problem
+using qualitative Bayesianism along the lines discussed by Fairfield and
+collaborators.

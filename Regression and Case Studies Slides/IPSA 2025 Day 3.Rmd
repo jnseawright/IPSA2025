@@ -1,0 +1,387 @@
+---
+title: "Qualitative Research and Causal Inference"
+subtitle: "Mixed Methods: IPSA"
+author: "<large>J. Seawright</large>"
+institute: "<small>IPSA Summer School</small>" 
+date: "January 2025"
+output: 
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+  
+---
+class: center, middle
+
+```{css, echo=FALSE}
+pre {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 200px;
+}
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+# Initializes the bibliography
+library(RefManageR)
+
+library(knitr)
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(nlme)
+library(jtools)
+library(hrbrthemes)
+library(mice)
+
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear", # Bibliography style
+           max.names = 3, # Max author names displayed in bibliography
+           sorting = "nyt", #Name, year, title sorting
+           cite.style = "authoryear", # citation style
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+#myBib <- ReadBib("assets/myBib.bib", check = FALSE)
+# Note: don't forget to clear the knitr cache to account for changes in the
+# bibliography.
+```
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer,MnSymbol)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  text_font_size = "1.6rem"
+)
+```
+
+---
+
+
+---
+### Discussion: Regression Lab
+
+
+---
+### The Diversity of Qualitative Research
+
+-   Historical methods
+
+-   In-depth interviews
+
+-   Focus groups
+
+-   Participant observation
+
+-   Close reading of texts
+
+
+---
+### Focus Groups
+
+-   Research method devoted to data collection
+
+-   Interaction in a group discussion is the source of the data
+
+-   The researcher actively creates the group discussion
+
+
+---
+### Focus Groups
+
+-   Allow in-depth exploration of complex behaviors and ideas
+
+-   Provide fine-grained detail regarding reasons for and scope of
+    disagreement among participants
+
+
+---
+### Focus Groups vis-a-vis Surveys
+
+
+---
+### Focus Groups vis-a-vis Individual Interviews
+
+
+---
+### Project-Level Design Issues
+
+-   Standardization
+
+-   Sampling
+
+-   Number of Groups
+
+
+---
+### Group-Level Design Issues
+
+-   Level of Moderator Involvement
+
+-   Group Size
+
+
+---
+### When Case Studies Directly Illuminate Counterfactuals
+
+
+---
+### Threats
+
+-   History
+
+-   Maturation
+
+-   Testing
+
+-   Instrumentation
+
+-   Instability
+
+-   Regression
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/miamiboatlift.JPG")
+```
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/mariel1.JPG")
+```
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/mariel2.JPG")
+```
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/marielcomparison.JPG")
+```
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/marielcomparison2.JPG")
+```
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/marielconclusions.JPG")
+```
+
+---
+### Process-Tracing I: CPOs
+
+-   Straw in the Wind Test
+
+-   Hoop Test
+
+-   Smoking Gun Test
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/pt1.JPG")
+```
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/pt2.JPG")
+```
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/pt3.JPG")
+```
+
+
+---
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/ptaux.JPG")
+```
+
+
+---
+### CPOs and the Potential Outcomes Framework
+
+Bayes' Rule
+
+$$P(H | E) = \frac{P(E | H) P(H)}{P(E | H) P(H) + P(E | \sim H) P(\sim H)}$$
+
+
+---
+### Examples
+
+-   Brady on Florida 2000
+
+-   Tannenwald on the Nuclear Taboo
+
+
+---
+### Bennett and Checkel's Standards
+
+-   Cast the net widely for alternative explanations
+
+-   Be equally tough on the alternative explanations
+
+-   Consider the potential biases of evidentiary sources
+
+-   Take into account whether the case is most or least likely for
+    alternative explanations
+
+-   Make a justifiable decision on when to start
+
+
+---
+### Bennett and Checkel's Standards
+
+-   Be relentless in gathering diverse and relevant evidence, but make a
+    justifiable decision on when to stop
+
+-   Combine process tracing with case comparisons when useful for the
+    research goal and feasible
+
+-   Be open to inductive insights
+
+-   Use deduction to ask: \"if my explanation is true, what will be the
+    specific process leading to the outcome?\"
+
+-   Remember that conclusive process tracing is good, but not all good
+    process tracing is conclusive
+
+
+---
+### Measurement's Contribution to Causal Inference
+
+-   Can causal inference be done correctly if $T_{i}$ is miscoded?
+
+-   Can causal inference be done correctly if $Y_{i}$ is miscoded?
+
+
+---
+### Qualitative Approaches to Measurement
+
+-   Cases and concepts
+
+-   Attention to tensions between and limits of sources
+
+-   Attention to subjectivity
+
+-   Breadth of information
+
+-   Expert Judgment
+
+
+---
+### Qualitative Approaches to Measurement
+
+Example: Fourcade on the professional structure of economics
+
+
+---
+### Process Tracing 2: Following Causal Flows
+
+
+---
+### Example: Stokes on Fujimori
+
+
+---
+### Example: Prasad on Reagan
+
+
+---
+### Finding New Variables
+
+
+---
+### Cross-Case Comparison
+
+For causal inference from a paired comparison of case $i$ with case $j$:
+
+$$Y_{i,t} = Y_{j,t}$$
+
+$$Y_{i,c} = Y_{j,c}$$
+
+
+---
+> \...the label "comparative method" has a standard meaning within\...
+> the social sciences more broadly: it refers to the methodological
+> issues that arise in the systematic analysis of a small number of
+> cases, or a "small N."
+>
+> ---David Collier, 1993
+
+
+---
+
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/davidkoch.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/johnmenardjr.jpg")
+
+```
+
+---
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/davidkoch.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/johnmenardjr.jpg")
+
+```
+
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/kochindustries.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/menardsstore.png")
+
+```
+
+---
+
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/kochresidence.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/menardhouse.jpg")
+
+```
+
+---
+```{r, echo = FALSE, fig.show = "hold", out.width = "30%", fig.align = "default"}
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/kochtheater.jpg")
+
+knitr::include_graphics("https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/img/menardracing.jpg")
+
+```
+
+---
+-   Conceptual innovation and clarification
+
+-   Prevalence of key causal capacities
+
+-   Theorybuilding about moderation
+
+
+---
+### Common Assumptions
+
+-   Key links in process-tracing chain are genuinely causal
+
+-   Events in this case reflect broad causal principles
+
+-   In comparative analysis, the dependent variable is measured
+    comparably
+
