@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Comparative Case Designs</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="J. Seawright" />
+    <script src="IPSA-2025-Extensions-Day-1_files/header-attrs-2.25/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Comparative Case Designs
+]
+.subtitle[
+## Mixed Methods Extensions: IPSA
+]
+.author[
+### <large>J. Seawright</large>
+]
+.institute[
+### <small>IPSA Summer School</small>
+]
+.date[
+### January 2025
+]
+
+---
+
+class: center, middle
+
+&lt;style type="text/css"&gt;
+pre {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 200px;
+}
+&lt;/style&gt;
+
+
+
+
+---
+### Basics of Multi-Method Research
+
+-   Integrative multi-method designs
+
+-   Strengths and weaknesses of regression and case studies
+
+-   Detailed designs for combining case studies and regression
+
+-   Formal analysis of optimal case selection strategies
+
+
+---
+&lt;img src="img/yule1.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+![image](img/yule2.JPG)
+
+
+---
+### Extending the Integrative Multi-Method Paradigm
+
+-   Comparative-Case Designs
+
+-   Natural experiments
+
+-   True experiments
+
+-   Case study-focused designs
+
+-   Conceptualization, measurement, and theory building
+
+
+---
+### Experimental Designs
+
+
+---
+### Matching
+
+
+---
+### The Method of Difference
+
+&gt; If an instance in which the phenomenon under investigation occurs, and
+&gt; an instance in which it does not occur, have every circumstance in
+&gt; common save one, that one occurring only in the former; the
+&gt; circumstance in which alone the two instances differ is the effect, or
+&gt; the cause, or an indispensable part of the cause, of the phenomenon.
+&gt; (Mill 1843/2002)
+
+
+---
+### The Method of Difference
+
+Debunking the Method of Difference
+
+
+---
+### The Potential Outcomes Framework
+
+Strictly speaking, for the Method of Difference to work based on a
+comparison between cases 1 and 2, the condition which must be met is:
+
+`$$\begin{aligned}
+Y_{1,t} = Y_{2,t}\\
+Y_{1,c} = Y_{2,c}
+\end{aligned}$$`
+
+
+---
+### Experiments
+
+In a randomized experiment, it is true by the Law of Large Numbers that:
+
+`$$\begin{aligned}
+\frac{\displaystyle\sum_{i: D_{i} = t}Y_{i,t}}{\displaystyle\sum_{i: D_{i} = t} i} \approx \frac{\displaystyle\sum_{j: D_{j} = C}Y_{j,t}}{\displaystyle\sum_{j: D_{j} = c} j}
+\end{aligned}$$`
+
+
+---
+### Experiments
+
+In a randomized experiment, it is true by the Law of Large Numbers that:
+
+`$$\begin{aligned}
+\frac{\displaystyle\sum_{i: D_{i} = t}Y_{i,c}}{\displaystyle\sum_{i: D_{i} = t} i} \approx \frac{\displaystyle\sum_{j: D_{j} = c}Y_{j,c}}{\displaystyle\sum_{j: D_{j} = c} j}
+\end{aligned}$$`
+
+
+---
+### Matching
+
+Suppose, in an observational study, we somehow know that:
+
+`$$\begin{aligned}
+Y_{T,i} = f(\mathbf{X}_{i}) + \epsilon_{i}\\
+Y_{C,i} = g(\mathbf{X}_{i}) + \delta_{i}\\
+E(\epsilon | \mathbf{X}) = 0\\
+E(\delta | \mathbf{X}) = 0
+\end{aligned}$$`
+
+
+---
+### Matching
+
+`$$\begin{aligned}
+E(Y_{T,i} | D_{i} = T, \mathbf{X}_{i} = \mathbf{W}) &amp; = &amp; f(\mathbf{W}) + E(\epsilon_{i})\\
+                                                    &amp; = &amp; f(\mathbf{W}) \\
+                                                    &amp; = &amp; E(Y_{T,i} | D_{i} = C, \\
+                                                    &amp;   &amp; \mathbf{X}_{i} = \mathbf{W})
+\end{aligned}$$`
+
+`$$\begin{aligned}
+E(Y_{C,i} | D_{i} = T, \mathbf{X}_{i} = \mathbf{W}) = \\
+E(Y_{C,i} | D_{i} = C, \mathbf{X}_{i} = \mathbf{W})
+\end{aligned}$$`
+
+
+---
+### Matching
+
+Let:
+
+`\(\tau_{\mathbf{W}} = E(Y_{T,i} | D_{i} = T, \mathbf{X}_{i} = \mathbf{W}) -\)`
+
+`\(E(Y_{C,i} | D_{i} = C, \mathbf{X}_{i} = \mathbf{W})\)`.
+
+Also let `\(\mathbf{W}\)` have probability density function `\(w()\)`.
+
+Then the average treatment effect of `\(D\)` on `\(Y\)` for the population is:
+
+`$$ATE = \int \tau_{\mathbf{\omega}} w(\mathbf{\omega})\,d\mathbf{\omega}$$`
+
+
+---
+### Matching as Second-Best
+
+Matching is second-best to an experiment because:
+
+1.  We need to identify an adequate collection of matching variables,
+    `\(\mathbf{X}\)`.
+
+2.  We need stronger modeling assumptions, including assumptions about
+    the existence of and conditional means of `\(\epsilon\)` and `\(\delta\)`.
+
+3.  For further discussion, see Freedman, Pisani, and Purves (2007), Ch.
+    1.
+
+
+---
+### Matching as Second-Best
+
+Matching is second-best to a fully-specified regression analysis
+because:
+
+1.  We lose the efficiency of using all cases to estimate a small number
+    of parameters.
+
+2.  What is the S.E. of
+    `\(\int \tau_{\mathbf{\omega}} w(\mathbf{\omega})\,d\mathbf{\omega}\)`?
+
+3.  A well-specified regression sometimes comes closer to replicating
+    experimental findings than do matching estimators (see, e.g.,
+    Peikes, Moreno, and Orzol 2008).
+
+
+---
+### So, Why Match?
+
+-   Experiments aren't always available.
+
+-   Sometimes, we don't know `\(f()\)` and `\(g()\)`.
+
+-   Matching combines neatly with case studies.
+
+
+---
+### Three Causal Quantities
+
+1.  ATE: `\(E(Y_{T} - Y_{C})\)`
+
+2.  ATT: `\(E(Y_{T} - Y_{C} | D = T)\)`
+
+3.  ATC: `\(E(Y_{T} - Y_{C} | D = C)\)`
+
+
+---
+### Pairwise Matching
+
+1.  Take a sample of `\(N_{T}\)` treatment cases and `\(N_{C}\)` control cases.
+
+2.  For each treatment case, find the control case that "best" matches
+    on `\(\mathbf{X}\)`. Save the difference on `\(Y\)` between those two cases
+
+3.  Average the resulting paired differences. Use this as an estimate of
+    ATT.
+
+
+---
+### Propensity Score
+
+ definition
+The *propensity score* for case `\(i\)` is the probability that `\(D_{i} = T\)`
+conditional on `\(\mathbf{X}_{i}\)`.
+
+
+A well-estimated propensity score contains all the information about
+`\(\mathbf{X}_{i}\)` that is relevant to causal inference.
+
+
+---
+### Application: Female Legislators
+
+-   It is widely believed that proportional representation electoral
+    rules produce more female legislators than do single-member district
+    rules (e.g., Kenworthy and Malami 1999, Matland 1998, Norris 2004,
+    Paxton and Kunovich 2003, Reynolds 1999, Rule 1987, Siaroff 2000).
+
+-   Several regression analyses have found effects in the neighborhood
+    of 7-12%.
+
+
+---
+### Application: Female Legislators
+
+-   These models have assumed that there is a single, constant effect of
+    electoral rules on women's legislative inclusion. Is that assumption
+    plausible?
+
+-   For example, is the ATT equal to the ATC?
+
+
+---
+### Application: Female Legislators
+
+&lt;img src="img/rscwomen.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+### Matching for Case Selection
+
+-   Selecting cases by matching can be used for data preprocessing to
+    reduce model dependence (Ho, Imai, King, and Stewart 2007).
+
+-   Matching can be used to select negative cases for statistical
+    analysis.
+
+
+---
+### Application: Female Legislators
+
+-   If electoral rules cause female legislative inclusion, then a change
+    in rules should lead to a change in the number of female
+    legislators.
+
+-   The worldwide trend toward electing more female legislators is an
+    obstacle to inference.
+
+-   No-change cases are needed to allow difference-in-differences
+    analysis.
+
+
+---
+### Application: Female Legislators
+
+1.  Collect data on the election before and after every change in
+    electoral rules since 1950.
+
+2.  Collect data on every other democratic election since 1950.
+
+3.  Code cases with a rule change as treatment cases, and cases without
+    as control cases.
+
+4.  Carry out propensity-score matching, and run the model on the cases
+    in the matches.
+
+
+---
+### Application: Female Legislators
+
+
+| Parameter            |  Estimate (S.E.)  |
+| :------------------: |:-----------------:| 
+| *Intercept*          | 1.461\*\* (0.587) | 
+| *More Restrictive*   | 0.041 (1.192)     | 
+| *Less Restrictive*   | 0.828 (1.128)     | 
+| *Quota*              | -0.413 (1.024)    | 
+
+`\(R^2\)` = 0.008
+
+*N* = 103
+
+
+
+---
+### Conclusions
+
+-   Matching is rarely the ideal research design.
+
+-   However, for many research questions, matching allows us to proceed
+    in spite of being unable to execute the best research design.
+
+
+---
+### Comparing Cases
+
+&lt;img src="img/ptmatches.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+### Case Studies and Matching
+
+Choosing Cases for In-Depth Study:
+
+1.  Paired cases that make a very large contribution to the effect
+    estimate
+
+2.  The highest propensity-score treatment case, and the lowest
+    propensity-score control case
+
+3.  Extreme cases on `\(Y\)`
+
+
+---
+
+&lt;img src="img/ptfulltable.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+###France
+
+![image](img/franceelectoralsystem.jpg)
+
+
+---
+![image](img/france2017.jpg)
+
+
+---
+###Japan
+
+![image](img/japanelectoralsystem.jpg)
+
+
+---
+![image](img/japan2017.jpg)
+
+---
+###Fiji
+
+![image](img/fijielectoralsystem.jpg)
+
+
+---
+![image](img/fiji2018.jpg)
+
+
+---
+###Malta
+
+![image](img/maltaelectoralsystem.jpg)
+
+
+---
+![image](img/malta2017.jpg)
+
+
+---
+### Case Studies and Matching
+
+Search for:
+
+-   Confounding variables
+
+-   Measurement error in the treatment variable
+
+-   Causal pathways
+
+
+---
+### Manufacture Perfect Comparisons
+
+Strictly speaking, for the Method of Difference to work based on a
+comparison between cases 1 and 2, the condition which must be met is:
+
+`$$\begin{aligned}
+        Y_{1,t} = Y_{2,t}\\
+        Y_{1,c} = Y_{2,c}
+\end{aligned}$$`
+
+
+---
+### Manufacture Perfect Comparisons
+
+No observable condition can ever guarantee that this assumption is met,
+but if we were to find two cases that *exactly* match on a suitably rich
+set of background variables `\(\mathbb{X}\)`, perhaps, we would believe the
+assumption.
+
+
+---
+### Manufacture Perfect Comparisons
+
+Unfortunately, if `\(\mathbb{X}\)` is indeed a reasonably deep list of
+variables, we are unlikely to find cases that in fact exactly match (or
+even come particularly close).
+
+
+---
+### Manufacture Perfect Comparisons
+
+Abadie and collaborators suggest that we create our own "synthetic"
+control cases, by averaging together existing control cases to come as
+close as possible to exactly matching the treatment case on
+`\(\mathbb{X}\)`.
+
+
+---
+### Synthetic Control
+
+The setup is one in which there are `\(N\)` cases, each of which is observed
+at multiple time periods labeled from 1 through `\(T\)`.
+
+
+---
+### Synthetic Control
+
+Each case has a treatment and control potential outcome for each time
+period. The difference between these is:
+
+`\(\alpha_{i,t} = Y^T_{i,t} - Y^C_{i,t}\)`
+
+
+---
+### Synthetic Control
+
+Suppose that the treatment of interest happens in one case at one time
+period. That is, `\(D_{j,t}=0\)` for all `\(j \neq i\)` and for all
+`\(t &lt; t_{treat}\)`.
+
+
+---
+### Synthetic Control
+
+`\(X_{i} -  \mathbb{X}_{j} W\)`
+
+
+---
+### Synthetic Control
+
+`\(\sqrt{(X_{i} -  \mathbb{X}_{j} W)^{T} V (X_{i} -  \mathbb{X}_{j} W)}\)`
+
+
+---
+### Synthetic Control
+
+![image](img/choosingv.png)
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth2.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth3.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth4.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth5.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth6.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth7.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth8.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+### Synthetic Control
+
+&lt;img src="img/chavezsynth9.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+### Synthetic Control
+
+Synth library
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
