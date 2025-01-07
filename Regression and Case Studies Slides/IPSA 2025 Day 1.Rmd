@@ -72,17 +72,39 @@ include_graphics("multimethodgoogle.jpeg")
 ---
 ### Why Mixed-Method Research?
 
-In 2023:
+In 2024:
 
--   17,100 instances of OLS regression
+-   7,690 instances of OLS regression
 
--   4,550 instances of multi-method
+-   1,470 instances of multi-method
 
--   12,800 instances of mixed-method
+-   29,500 instances of mixed-method
+
+---
+### Lieberman's Paradigm
+
+```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
+include_graphics("liebermanarticle1.png")
+```
+
+---
+### Lieberman Example
+
+![image](liebermanbook1.png)
+---
+### Lieberman Example
+
+![image](liebermanbook2.png)
 
 
 ---
-### An Example
+### Lieberman Example
+
+![image](liebermanbook3.png)
+
+
+---
+### A Newer Example
 
 Why do some states in the U.S. have many fewer laws about labor than
 other states?
@@ -140,6 +162,174 @@ Probably it has something to do with unions?
 
 ---
 ![image](galvin12.jpg)
+
+---
+### A Different Kind of Example
+
+Laitin and Fearon (2003) report statistical evidence of a connection
+between mountainous terrain and civil war.
+
+
+---
+### A Different Kind of Example
+
+Logit coefficients for the relationship range between 0.12 and 0.42.
+
+
+---
+### A Different Kind of Example
+
+![image](colombiamountains.jpg)
+
+
+---
+### A Different Kind of Example
+
+Colombia experienced civil war through much of the 19th century
+
+
+---
+### A Different Kind of Example
+
+![image](laviolencia.jpg)
+
+
+---
+### A Different Kind of Example
+
+![image](colombiafarc.jpg)
+
+
+---
+### A Different Kind of Example
+
+![image](columbia_farc_02.jpg)
+
+
+---
+### A Different Kind of Example
+
+![image](bogota.jpg)
+
+
+---
+### What Is Multi-Method Research?
+
+ definition
+*Triangulation* is the combination of research designs drawn from more
+than one methodological family both or all of which are aimed at
+providing separate answers to a research question.
+
+
+
+---
+### What Is Multi-Method Research?
+
+ definition
+*Integrative multi-method research* is research that uses techniques
+drawn from more than one methodological family in the course of
+answering a single integrated research question or testing a single
+overarching hypothesis.
+
+
+
+---
+### Costs of Triangulation
+
+![image](avenburg1.png)
+
+
+---
+### Costs of Triangulation
+
+![image](avenburg2.png)
+
+
+---
+### Agenda
+
+1.  Integration and the potential outcomes framework
+
+2.  Causal inference and regression
+
+3.  How qualitative research contributes to causal inference
+
+4.  Case selection
+
+5.  Assumption-testing research designs for regression/case studies
+
+
+---
+### A Spectrum of Arguments about Multiple Methods
+
+-   Social-science methods never teach us anything
+
+-   One family of research is always better than the others
+
+-   Quantitative and qualitative research can never communicate
+
+-   Triangulation
+
+-   Integration
+
+
+---
+### Goertz and Mahoney
+
+Qualitative and quantitative research speak different languages because
+of differences in ontology.
+
+
+---
+### Concepts of Causation
+
+Potential Outcomes Framework
+
+$T_{i}$, $Y_{i,t}$
+
+
+---
+### Four Traditions of Causal Thought
+
+Humean Regularity Theory
+
+Counterfactual Theory
+
+Manipulation Theory
+
+Capacities and Mechanisms
+
+
+---
+### Concepts of Causation
+
+Necessary Causation
+
+$Y_{i,0} = 0$ for all $i$.
+
+
+---
+### Concepts of Causation
+
+Sufficient Causation
+
+$Y_{i,1} = 1$ for all $i$.
+
+
+---
+### Concepts of Causation
+
+Causal Pathways
+
+$T_{i}$
+
+$M_{i,t,1}$, $M_{i,t,m1,2}$, $M_{i,t,m1,m2,3}$, etc
+
+$Y_{i,t,m1,m2,m3}$
+
+
+
+
 
 
 ---
@@ -238,169 +428,4 @@ car if they suspect that he's on drugs?
 A. I think the courts have said that they haven't, isn't that what they
 courts have said? Well, you hear verdicts where it's on and off but it,
 it seems to me that they, they probably shouldn't.
-
-
----
-### One Last Example
-
-Laitin and Fearon (2003) report statistical evidence of a connection
-between mountainous terrain and civil war.
-
-
----
-### One Last Example
-
-Logit coefficients for the relationship range between 0.12 and 0.42.
-
-
----
-### One Last Example
-
-![image](colombiamountains.jpg)
-
-
----
-### One Last Example
-
-Colombia experienced civil war through much of the 19th century
-
-
----
-### One Last Example
-
-![image](laviolencia.jpg)
-
-
----
-### One Last Example
-
-![image](colombiafarc.jpg)
-
-
----
-### One Last Example
-
-![image](columbia_farc_02.jpg)
-
-
----
-### One Last Example
-
-![image](bogota.jpg)
-
-
----
-### What Is Multi-Method Research?
-
- definition
-*Triangulation* is the combination of research designs drawn from more
-than one methodological family both or all of which are aimed at
-providing separate answers to a research question.
-
-
-
----
-### What Is Multi-Method Research?
-
- definition
-*Integrative multi-method research* is research that uses techniques
-drawn from more than one methodological family in the course of
-answering a single integrated research question or testing a single
-overarching hypothesis.
-
-
-
----
-### Costs of Triangulation
-
-![image](avenburg1.png)
-
-
----
-### Costs of Triangulation
-
-![image](avenburg2.png)
-
-
----
-### Agenda
-
-1.  Integration and the potential outcomes framework
-
-2.  Causal inference and regression
-
-3.  How qualitative research contributes to causal inference
-
-4.  Case selection
-
-5.  Assumption-testing research designs for regression/case studies
-
-
----
-### A Spectrum
-
--   Social-science methods never teach us anything
-
--   One family of research is always better than the others
-
--   Quantitative and qualitative research can never communicate
-
--   Triangulation
-
--   Integration
-
-
----
-### Goertz and Mahoney
-
-Qualitative and quantitative research speak different languages because
-of differences in ontology.
-
-
----
-### Concepts of Causation
-
-Potential Outcomes Framework
-
-$T_{i}$, $Y_{i,t}$
-
-
----
-### Four Traditions of Causal Thought
-
-Humean Regularity Theory
-
-Counterfactual Theory
-
-Manipulation Theory
-
-Capacities and Mechanisms
-
-
----
-### Concepts of Causation
-
-Necessary Causation
-
-$Y_{i,0} = 0$ for all $i$.
-
-
----
-### Concepts of Causation
-
-Sufficient Causation
-
-$Y_{i,1} = 1$ for all $i$.
-
-
----
-### Concepts of Causation
-
-Causal Pathways
-
-$T_{i}$
-
-$M_{i,t,1}$, $M_{i,t,m1,2}$, $M_{i,t,m1,m2,3}$, etc
-
-$Y_{i,t,m1,m2,m3}$
 
