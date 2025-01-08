@@ -1,0 +1,56 @@
+# Syllabus Multi-Method Research: Extensions
+
+Email: <j-seawright@northwestern.edu>
+
+# Course Schedule and Readings
+
+This schedule is subject to changes (minor or major) depending on how
+long each topic actually takes us to cover, as well as on the needs of
+the class.
+
+Monday: *Multi-Method Comparative Case-Study Designs*.
+
+Seawright 2016: Chapter 5.
+
+Richard A. Nielsen. 2016. "Case Selection via Matching." Sociological
+Methods & Research 45(3): 569-97.
+<https://doi.org/10.1177/0049124114547054>
+
+Abadie, Alberto, Alexis Diamond, and Jens Hainmueller. 2015.
+"Comparative Politics and the Synthetic Control Method." American
+Journal of Political Science, 59: 495-510.
+<https://doi.org/10.1111/ajps.12116>
+
+Tuesday: *Combining Case Studies and Natural Experiments*.
+
+Seawright 2016: Chapter 6.
+
+Bennett and Checkel 2015: Chapter 8.
+
+Wednesday: *Combining Case Studies and Laboratory/Field Experiments*.
+
+Seawright and Koivu. Forthcoming. Chapter 5. "Causal Inference with Randomization."
+
+Elizabeth Levy Paluck. 2010. "The Promising Integration of Qualitative
+Methods and Field Experiments." The Annals of the American Academy of
+Political and Social Science 628 (March): 59-71.
+<https://doi.org/10.1177/0002716209351510>
+
+Pérez Bentancur, Verónica, and Lucía Tiscornia. “Iteration in Mixed-Methods Research Designs Combining Experiments and Fieldwork.” Sociological Methods & Research, (March 2022). <https://doi.org/10.1177/00491241221082595>
+
+Seawright 2016: Chapter 7.
+
+Thursday: *Building Quantitative Components in Case Studies*.
+
+Seawright and Koivu. Forthcoming. Chapter 2. "Process Tracing and Multi-Method Research."
+
+Seawright and Koivu. Forthcoming. Chapter 3. "Multi-Method Case Studies."
+
+Friday: *Multi-Method Designs for Concepts, Measurement, and Theory*.
+
+Seawright, Koivu, and Weylandt. Forthcoming. Chapters 6-7. "Multi-Method Concept-Making and Measurement."
+
+Andreotta, Matthew, Robertus Nugroho, Mark J. Hurlstone, et al. 2019.
+"Analyzing Social Media Data: A Mixed-Methods Framework Combining
+Computational and Qualitative Text Analysis." Behavior Research Methods
+51: 1766--1781. <https://doi.org/10.3758/s13428-019-01202-8>

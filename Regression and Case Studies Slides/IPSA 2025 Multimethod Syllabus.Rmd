@@ -1,0 +1,63 @@
+# Syllabus Multi-Method Research: Regression and Case Studies
+
+Email: <j-seawright@northwestern.edu>
+
+## Course Schedule and Readings
+
+This schedule is subject to changes (minor or major) depending on how
+long each topic actually takes us to cover, as well as on the needs of
+the class.
+
+Monday: *Multi-Method Causal Inference*.
+
+Seawright and Koivu. Forthcoming. Chapter 1.
+
+Seawright 2016: Chapters 1, 2, and Appendix.
+
+Beach, Derek. “Multi-Method Research in the Social Sciences: A Review of Recent Frameworks and a Way Forward.” Government and Opposition 55, no. 1 (2020): 163–82. <https://doi.org/10.1017/gov.2018.53>
+
+Lieberman, Evan S., “Nested Analysis as a Mixed-Method Strategy for Comparative Research.” American Political Science Review 99, no. 3 (2005): 435–52. <https://doi.org/10.1017/S0003055405051762> 
+
+Tuesday: *Quantitative Methods and Causal Inference*.
+
+Luke Keele, Randolph T. Stephenson, and Felix Elwert. 2020. "The
+causal interpretation of estimated associations in regression models."
+Political Science Research and Methods.
+<https://doi.org/10.1017/psrm.2019.31>
+
+Jason Seawright. 2019. "Statistical analysis of democratization: a
+constructive critique." Democratization 26 (1): 21-39.
+<https://doi.org/10.1080/13510347.2018.1511540>
+
+Wednesday: *Qualitative Methods and Causal Inference*.
+
+Bateman, David A. and Dawn Langan Teele. 2020. "A Developmental Approach to Historical Causal Inference." Public Choice 185: 253--279.
+<https://doi.org/10.1007/s11127-019-00713-4>
+
+Fairfield, Tasha, and Andrew E. Charman. 2017. "Explicit Bayesian
+Analysis for Process Tracing: Guidelines, Opportunities, and Caveats."
+Political Analysis 25(3): 363--80. <https://doi.org/10.1017/pan.2017.14>
+
+Bennett, Andrew, Andrew E. Charman, and Tasha Fairfield. 2022.
+"Understanding Bayesianism: Fundamentals for Process Tracers." Political Analysis 30(2): 298--305. <https://doi.org/10.1017/pan.2021.23>
+
+Thursday: *Combining Case Studies and Regression I*.
+
+Seawright, Koivu, and Galvin. Forthcoming. Chapter 4. "Regression and Similar Methods in Multi-Method Research."
+
+Seawright 2016: Chapter 3.
+
+Goetz, Gary. 2016. "Multimethod Research." Security Studies 25(1): 3-24. <https://doi.org/10.1080/09636412.2016.1134016>
+
+Friday: *Combining Case Studies and Regression II*.
+
+Seawright 2016: Chapter 4.
+
+Herron, Michael C., Kevin M. Quinn. "A Careful Look at Modern
+Qualitative Case Selection Methods." Sociological Methods & Research
+(2016). <https://doi.org/10.1177/0049124114547053>
+
+Galvin, Daniel J., and Jason Seawright. 2023. "Surprising Causes:
+Propensity-adjusted Treatment Scores for Multimethod Case Selection."
+Sociological Methods & Research, 52(4), 1632-1680.
+<https://doi.org/10.1177/00491241211004632>

@@ -1,0 +1,39 @@
+# Lab 3: Mixed-Method Extensions
+
+*Design an Experiment*
+
+For a research topic that interests you, brainstorm and design an
+experiment that could test a meaningful hypothesis. Design a treatment
+and a way of measuring the outcome, and build in qualitative measurement components that allow for multi-method analysis. If at all possible, design the experiment so that it can be implemented right now.
+
+When you have designed it, find a partner and take turns running through one round of the experiment. (If you can successfully get one person through the experiment, then actually implementing the experiment is just a matter of numbers.) Were there problems or unexpected discoveries? If you were to implement the experiment in real life, how would you alter it compared with what you just designed?
+
+*We Can't Do Experiments!*
+
+Political scientists routinely complain that they can't possibly do
+experiments for their topics of interest. Indeed, for some topics, more
+can be learned in other ways --- but experiments connected with a given
+topic are almost always possible with enough creativity. Find a small
+group and, together, brainstorm experiments that would speak to each of
+the following "impossible" research topics. A good strategy is to think
+about testable implications that are pieces of an overall hypothesis.
+
+-   The effects of candidate gender on voter decision-making
+
+-   The democratic peace hypothesis
+
+-   Authoritarianism is a fixed personality trait.
+
+-   Climate change is increasing the salience of ethnic politics.
+
+-   Social media makes people more polarized.
+
+*Multi-Method Experiments in Practice?*
+
+Choose a topic of interest to you for which you expect that a large
+number of laboratory or field experiments have been done. Read quickly
+through as many as you can, and note what (if anything) these
+experiments do to test SUTVA and experimental realism. Select what you
+see as the best experiment in the bunch and design a multi-method
+component for the study that would better test SUTVA and experimental
+realism.

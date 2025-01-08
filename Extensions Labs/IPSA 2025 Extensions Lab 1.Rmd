@@ -1,0 +1,242 @@
+# Lab 1: Mixed-Method Extensions
+
+*Inequality and Democracy, with Matching*
+
+In this exercise, we will use matching to set up a multi-method study of
+whether democracy causes (or reduces) economic inequality. Create a
+dichotomous version of the Polity regime indicator:
+
+```{r, results='hide'}
+inequality <- read.csv("https://raw.githubusercontent.com/jnseawright/practice-of-multimethod/main/data/inequality.csv")
+
+inequality$polbin <- 1*(inequality$Polity > 0)
+```
+
+Next, load software for matching into R:
+
+```{r, results='hide'}
+
+library(Matching)
+```
+
+Now, build an initial propensity score for democracy:
+
+
+```{r, results='hide'}
+dempropensitylogit <- glm(polbin ~ log(GDP) + 
+    Industry + FuelExports + CommunistLegacy, 
+        data=inequality, family=binomial(link=logit))
+    inequality$pscores <- NA
+    inequality$pscores[as.numeric(
+        names(dempropensitylogit$fitted))]<- dempropensitylogit$fitted
+```
+
+Now, we discard missing data and carry out the matching:
+
+
+```{r, results='hide'}
+ineqtrim <- inequality[!is.na(inequality$Gini) & 
+      !is.na(inequality$pscores),]
+ineqmatch <- Match(Y=ineqtrim$Gini, Tr=ineqtrim$polbin, 
+      X=ineqtrim$pscore, estimand="ATE")
+summary(ineqmatch)
+```
+
+What do you conclude from these results?
+
+What are the key assumptions being made to get to causal inference with this analysis? Design qualitative components to test as many of those assumptions as possible. Select one or more appropriate cases and, using the resources available to you today, carry out as many of those qualitative components as you can. What do you conclude about the original analysis, and how if at all would you redesign it?
+
+For case selection, you can modify the sample code found at the bottom of this page.
+
+*Legislative Inclusion of Women*
+
+Load the data set on women's legislative representation.
+
+```{r, results='hide'}
+fourelec <- read.csv("data/fourelec.csv")
+```
+
+Fit the following logit:
+
+```{r, results='hide'}
+maj.glm <- glm(maj ~ prop65 +
+  I(log(lyp)) + gastil + federal +
+    col_uka + laam,
+      family=binomial(link=logit),
+      data=fourelec)
+         
+summary(maj.glm)
+```
+
+Now we will use the logit we estimated above to extract propensity
+scores:
+
+```{r, results='hide'}
+fourelec$pscore <- NA
+fourelec$pscore[as.integer(names(maj.glm$fitted.values))] <- 
+    maj.glm$fitted.values
+```
+
+Now we need to create a data set that contains the dependent variable
+(women's share of legislative seats, or wom1st), the main causal
+variable (maj), the propensity score, and the variables that went into
+forming the propensity score. This data set also needs to drop any cases
+that have missing data on any of those variables:
+
+```{r, results='hide'}
+fourelectrim <- na.omit(data.frame(wom_1st=fourelec$wom_1st,
+          maj=fourelec$maj, pscore=fourelec$pscore,
+          prop65=fourelec$prop65, lyp=fourelec$lyp,
+          gastil=fourelec$gastil, federal=fourelec$federal,
+          col_uka=fourelec$col_uka, laam=fourelec$laam,
+          country=fourelec$country))
+```
+
+We are now ready to carry out matching:
+
+```{r, results='hide'}
+
+firstmatch <- with(fourelectrim,Match(
+      Y=wom_1st,Tr=maj,X=pscore,est="ATT"))
+summary(firstmatch)
+```
+
+We can test the quality of our matching using balance testing:
+
+```{r, results='hide'}
+with(fourelectrim,MatchBalance(maj~prop65
+      + I(log(lyp)) + gastil + federal
+      + col_uka + laam,
+      match.out=firstmatch))
+```
+
+Let's identify the matched pair that makes the largest contribution to
+the estimate of ATT:
+
+```{r, results='hide'}
+fourelectrim$wom_1st[firstmatch$index.treated] - 
+      fourelectrim$wom_1st[firstmatch$index.control]
+
+mostimportantmatch <- which.max(
+      fourelectrim$wom_1st[firstmatch$index.treated] - 
+      fourelectrim$wom_1st[firstmatch$index.control])
+         
+
+fourelectrim$country[firstmatch$index.treated[
+      mostimportantmatch]]
+         
+fourelectrim$country[firstmatch$index.control[
+      mostimportantmatch]]
+```
+
+Does changing the logit specification alter the matching results? The
+case selection? Try one or two different logit models, and compare the
+results.
+
+What are the key moments in this research process where qualitative
+components could be added to test assumptions?
+
+We can also use this framework as a short-cut to select most-similar
+cases:
+
+```{r, results='hide'}
+fourelectrim$pscore[firstmatch$index.treated] - 
+      fourelectrim$pscore[firstmatch$index.control]
+
+mostsimilarcases <- which.min(
+      fourelectrim$pscore[firstmatch$index.treated] - 
+      fourelectrim$pscore[firstmatch$index.control])
+
+fourelectrim$country[firstmatch$index.treated[
+      mostsimilarcases]]
+         
+fourelectrim$country[firstmatch$index.control[
+      mostsimilarcases]]
+```
+
+Alternatively, you can construct a case-selection table like the one we used in lecture, using the code at the end of the page.
+
+*Economic Effects of Brexit*
+
+Can we use a synthetic controls strategy to come up with a mixed-method approach to understanding the economic consequences of Britain's exit from the European Union? Provide a proposed research design complete with necessary data and estimator, explain the required assumptions, and discuss the strengths and weaknesses of your proposal. Use the qualitative information available to you from your background knowledge and research available on the internet to justify the assumptions you are making to the extent feasible.
+
+If you have the time and can get it to work, provide results, as well. A good data source might be the QoG dataset
+(<https://www.gu.se/en/quality-government/qog-data/data-downloads/standard-dataset>).
+
+*Multi-Method Matching in Practice*
+
+For a research topic that interests you, find a published article that
+uses matching. Describe the qualitative evidence used in that article,
+if any. What untested assumptions are made to get to causal inference
+with this matching analysis? Design qualitative research components to
+test as many of those assumptions as possible; specify your design as
+thoroughly as possible, including data sources, what to look for in
+carrying out the analysis, and so forth.
+
+```{r, results='hide'}
+matchestable.fun <- function(match.obj,case.id,iv.score,dv.score,pscore) {
+  
+  data.frame(case.treat=case.id[match.obj$index.treated], 
+             case.control=case.id[match.obj$index.control],
+             est.contrib=(dv.score[match.obj$index.treated] - 
+                            dv.score[match.obj$index.control]), 
+             pscore.treat=pscore[match.obj$index.treated], 
+             pscore.control=pscore[match.obj$index.control])
+  
+}
+
+biggestcontributor.fun <- function(match.table) {
+  
+  match.table[which.max(abs(match.table$est.contrib - mean(match.table$est.contrib))),] 
+  
+}
+
+nbiggestcontributors.fun <- function(match.table,n) {
+  
+  match.table[order(abs(match.table$est.contrib - mean(match.table$est.contrib))[1:n],decreasing=TRUE),] 
+  
+}
+  
+strangestcontrol.fun <- function(match.table) {
+  
+  match.table[which.max(match.table$pscore.control),]
+  
+}
+
+nstrangestcontrols.fun <- function(match.table,n) {
+  
+  match.table[order(match.table$pscore.control,decreasing = TRUE)[1:n],]
+  
+}
+
+strangesttreat.fun <- function(match.table) {
+  
+  match.table[which.min(match.table$pscore.treat),]
+  
+}
+
+nstrangesttreats.fun <- function(match.table,n) {
+  
+  match.table[order(match.table$pscore.treat,decreasing = FALSE)[1:n],]
+  
+}
+
+#sample use of functions
+
+#ineq.table2 <- matchestable.fun(ineqmatch,ineqtrim$Country,ineqtrim$Polity, ineqtrim$Gini, ineqtrim$pscores)
+
+#biggestcontributor.fun(ineq.table2)
+
+#strangestcontrol.fun(ineq.table2)
+
+#strangesttreat.fun(ineq.table2)
+
+#nbiggestcontributors.fun(ineq.table2,10)
+
+#nstrangestcontrols.fun(ineq.table2,10)
+
+#nstrangesttreats.fun(ineq.table2,10)
+```
+
+
+

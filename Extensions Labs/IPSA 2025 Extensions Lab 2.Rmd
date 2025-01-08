@@ -1,0 +1,141 @@
+# Lab 2: Mixed-Method Extensions
+
+*Inequality and Democracy, a Natural Experiment*
+
+In this exercise, we will extend Acemoglu, Johnson, and Robinson's
+proposed natural experiment using settler mortality as an instrument for the effects of democracy on economic growth. Rather than growth, we will use inequality as the final outcome variable. We can carry this out using the inequality data with the following command:
+
+
+```{r, results='hide'}
+library(sem)
+
+inequality <- read.csv("data/inequality.csv")
+
+ineqtsls <- tsls(Gini ~ 
+      Polity + GDP + Industry + FuelExports + CommunistLegacy, 
+      ~ SettlerMortality + GDP + Industry + FuelExports + 
+      CommunistLegacy, data=inequality)
+```
+        
+
+What do you conclude from these results?
+
+What are the key assumptions being made to get to causal inference with this analysis? Design qualitative components to test as many of those assumptions as possible. Select one or more appropriate cases (you may need to run some auxiliary regressions to do this) and, using the resources available to you today, carry out as many of those qualitative components as you can. What do you conclude about the original analysis, and how if at all would you redesign it?
+
+*Class Size and Learning*
+
+To begin, load the following data sets on children's exam performance in Israel:
+
+```{r, results='hide'}
+library(foreign)
+final4 <- read.dta("data/final4.dta")
+final5 <- read.dta("data/final5.dta")
+```
+
+We will start by comparing average verbal and math performance among 4th and 5th graders in Israel, comparing those just above and just below the Maimonides' Rule threshold.
+
+```{r, results='hide'}
+rddlm1 <- lm(avgverb ~ I(c_size %in% c(41:45,81:85,121:125)),
+      data=final4,
+      subset=final4$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddlm1)
+
+rddlm2 <- lm(avgmath ~ I(c_size %in% c(41:45,81:85,121:125)),
+      data=final4,
+      subset=final4$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddlm2)
+
+rddlm3 <- lm(avgverb ~ I(c_size %in% c(41:45,81:85,121:125)),
+      data=final5,
+      subset=final5$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddlm3)
+
+rddlm4 <- lm(avgmath ~ I(c_size %in% c(41:45,81:85,121:125)),
+      data=final5,
+      subset=final5$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddlm4)
+```
+
+Let's take the comparison involving verbal scores in the 4th grade and
+select cases for in-depth study using matching:
+
+```{r, results='hide'}
+final4trim <- final4[final4$c_size 
+      %in% c(36:45,76:85,116:125),]
+final4trim$treatment <- 1*(final4trim$c_size 
+      %in% c(41:45,81:85,121:125))
+library(Matching)
+caseselectmatch <- Match(Y=final4trim$avgmath, 
+      Tr=final4trim$treatment, X=final4trim$tipuach, ties=FALSE)
+resulttable <- matrix(nrow=length(
+      caseselectmatch$index.treated),ncol=3)
+resulttable[,1] <- caseselectmatch$index.treated
+resulttable[,2] <- caseselectmatch$index.control
+resulttable[,3] <- 
+      final4trim$avgmath[caseselectmatch$index.treated] - 
+      final4trim$avgmath[caseselectmatch$index.control]
+resulttable[which.max(abs(resulttable[,3] - caseselectmatch$est)),]
+```
+
+Now let's analyze the same natural experiment using the Maimonides' Rule score for each cohort size as an instrument for class size:
+
+```{r, results='hide'}
+library(sem)
+
+maimonides.fun <- function(cohortsize) {
+      ifelse(cohortsize < 41, cohortsize,
+          ifelse(cohortsize < 81, cohortsize/2,
+                cohortsize/3))
+}
+
+rddtsls1 <- tsls(avgverb ~ classize
+      + c_size + tipuach, ~ I(maimonides.fun(c_size))
+      + c_size + tipuach, data=final4,
+      subset=final4$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddtsls1)
+
+rddtsls2 <- tsls(avgmath ~ classize
+      + c_size + tipuach, ~ I(maimonides.fun(c_size))
+      + c_size + tipuach, data=final4,
+      subset=final4$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddtsls2)
+
+rddtsls3 <- tsls(avgverb ~ classize
+      + c_size + tipuach, ~ I(maimonides.fun(c_size))
+      + c_size + tipuach, data=final5,
+      subset=final5$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddtsls3)
+
+rddtsls4 <- tsls(avgmath ~ classize
+      + c_size + tipuach, ~ I(maimonides.fun(c_size))
+      + c_size + tipuach, data=final5,
+      subset=final5$c_size %in% c(36:45,76:85,116:125))
+
+summary(rddtsls4)
+```
+
+Choose one analysis above, and use it to select cases for in-depth
+analysis. Explain why you chose the cases that you chose.
+
+Although we cannot access the students you have selected or their
+families, design a qualitative research plan to test key untested
+assumptions for the analysis you have selected as if they were
+accessible. For the research plan, describe each qualitative component,
+sketch the strategy for causal inference, and discuss what could be
+learned from various possible qualitative observations.
+
+*Multi-Method Natural Experiments in Practice*
+
+For a research topic that interests you, find three to five published
+articles that use some form of natural experiment. Describe any or all
+qualitative evidence used in the article, as well as any description
+offered of how the natural experiment was uncovered. Evaluate the
+quality of multi-method design employed in these articles and discuss
+ways that they could be enhanced.
