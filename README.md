@@ -4,6 +4,8 @@
 
 ### Regression and Case Studies
 
+[Syllabus](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/IPSA-2025-Multimethod-Syllabus.html)
+
 Slides:
 
 * [Monday](https://jnseawright.github.io/IPSA2025/Regression%20and%20Case%20Studies%20Slides/IPSA-2025-Day-1.html)
@@ -22,21 +24,23 @@ Labs:
 
 ### Mixed-Method Extensions
 
+[Syllabus](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA-2025-Multimethod-Extensions-Syllabus.html)
+
 Slides:
 
-* [Monday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA%202024%20Extensions%20Day%201.pdf)
-* [Tuesday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA%202024%20Extensions%20Day%202.pdf) 
-* [Wednesday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA%202024%20Extensions%20Day%203.pdf)
-* [Thursday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA%202024%20Extensions%20Day%204.pdf)
-* [Friday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA%202024%20Extensions%20Day%205.pdf) 
+* [Monday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA-2025-Extensions-Day-1.html)
+* [Tuesday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA-2025-Extensions-Day-2.html) 
+* [Wednesday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA-2025-Extensions-Day-3.html)
+* [Thursday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA-2025-Extensions-Day-4.html)
+* [Friday](https://jnseawright.github.io/IPSA2025/Extensions%20Slides/IPSA-2025-Extensions-Day-5.html) 
 
 Labs:
 
-* [Monday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA%202024%20Lab%206.pdf)
-* [Tuesday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA%202024%20Lab%207.pdf) 
-* [Wednesday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA%202024%20Lab%208.pdf)
-* [Thursday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA%202024%20Lab%209.pdf)
-* [Friday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA%202024%20Lab%2010.pdf) 
+* [Monday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-1.html)
+* [Tuesday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-2.html) 
+* [Wednesday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-3.html)
+* [Thursday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-4.html)
+* [Friday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-5.html) 
 
 
 
