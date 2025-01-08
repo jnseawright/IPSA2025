@@ -76,11 +76,15 @@ $\text{E}(Y_{i,0} | T_{i} = 1) \approx \text{E}(Y_{i,0} | T_{i} = 0)$
 
 Ethnicity vs. Cousinage
 
+<https://www.youtube.com/watch?v=LpjgD_zV0IY>
+
 
 ---
 ### Example: Cross-Cutting Cleavages in Mali
 
-![image](img/cousinage1.jpg)
+```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
+include_graphics("img/cousinage1.jpg")
+```
 
 ---
 ### Example: Cross-Cutting Cleavages in Mali
@@ -106,8 +110,10 @@ Ethnicity vs. Cousinage
 ---
 ### Example: Cross-Cutting Cleavages in Mali
 
+```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
+include_graphics("img/cousinage5.jpg")
+```
 
-![image](img/cousinage5.jpg)
 
 
 ---
@@ -213,7 +219,10 @@ Treatment 2 adds:
 
 ---
 
-![image](img/blmemotions.jpg)
+```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
+include_graphics("img/blmemotions.jpg")
+```
+
 
 
 ---
@@ -224,7 +233,10 @@ Treatment 2 adds:
 
 ---
 
-![image](img/blmpotus.jpg)
+```{r, echo = FALSE, out.width="80%", fig.retina = 1, fig.align='center'}
+include_graphics("img/blmpotus.jpg")
+```
+
 
 ---
 ### SUTVA
@@ -244,8 +256,9 @@ Enikolopov et al. 2013:
 ---
 ### Electoral Fraud in Russia
 
-![image](img/russiafraud.jpg)
-
+```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
+include_graphics("img/russiafraud.jpg")
+```
 
 ---
 ### Electoral Fraud in Russia
@@ -356,55 +369,54 @@ Open-ended questions
 
 
 ---
- {#venezuela}
-  ------ ------- --------- -------- ------- -------
-  Year   White   Mestizo   Moreno   Black   Other
-  2000   36%     43%       17%      4%      0%
-  2004   25%     30%       36%      5%      4%
-  2008   37%     12%       41%      4%      6%
-  ------ ------- --------- -------- ------- -------
+###Venezuela
 
-  : Venezuelan Racial and Ethnic Self-Descriptions, 2000-2008
+| Year | White | Mestizo | Moreno | Black | Other |
+| :--: |:-----:|:-------:|:------:|:-----:|:-----:| 
+| 2000 | 36%   | 43%     | 17%    | 4%    | 0%    | 
+| 2004 | 25%   | 30%     | 36%    | 5%    | 4%    |
+| 2008 | 37%   | 12%     | 41%    | 4%    | 6%    |
 
-
-
----
- {#bolivia}
-  ------ ------- --------- ------------ -------
-  Year   White   Mestizo   Indigenous   Other
-  2004   18%     62%       16%          4%
-  2006   11%     63%       20%          6%
-  2008   8%      68%       17%          7%
-  ------ ------- --------- ------------ -------
-
-  : Bolivian Racial and Ethnic Self-Descriptions, 2004-2008
+ Venezuelan Racial and Ethnic Self-Descriptions, 2000-2008
 
 
 
 ---
- {#colombia}
-  ------ ------- --------- ------------ ------- -------
-  Year   White   Mestizo   Indigenous   Black   Other
-  2004   33%     51%       6%           9%      1%
-  2006   35%     52%       4%           7%      2%
-  2008   35%     46%       4%           8%      7%
-  ------ ------- --------- ------------ ------- -------
+###Bolivia
 
-  : Colombian Racial and Ethnic Self-Descriptions, 2004-2008
+| Year | White | Mestizo | Indigenous | Other |
+| :--: |:-----:|:-------:|:----------:|:-----:| 
+| 2004 | 18%   | 62%     | 16%        | 4%    | 
+| 2006 | 11%   | 63%     | 20%        | 6%    |
+| 2008 | 8%    | 68%     | 17%        | 7%    |
+
+Bolivian Racial and Ethnic Self-Descriptions, 2004-2008
 
 
 
 ---
- {#peru}
-  ------ ------- --------- ------------ ------- -------
-  Year   White   Mestizo   Indigenous   Black   Other
-  2006   12%     75%       6%           1%      6%
-  2008   12%     73%       7%           2%      6%
-  2010   12%     77%       3%           2%      6%
-  ------ ------- --------- ------------ ------- -------
+###Colombia
 
-  : Peruvian Racial and Ethnic Self-Descriptions, 2006-2010
+| Year | White | Mestizo | Indigenous | Black | Other |
+| :--: |:-----:|:-------:|:----------:|:-----:|:-----:| 
+| 2004 | 33%   | 51%     | 6%         | 9%    | 1%    | 
+| 2006 | 35%   | 52%     | 4%         | 7%    | 2%    |
+| 2008 | 35%   | 46%     | 4%         | 8%    | 7%    |
 
+Colombian Racial and Ethnic Self-Descriptions, 2004-2008
+
+
+
+---
+###Peru
+
+| Year | White | Mestizo | Indigenous | Black | Other |
+| :--: |:-----:|:-------:|:----------:|:-----:|:-----:| 
+| 2006 | 12%   | 75%     | 6%         | 1%    | 6%    | 
+| 2008 | 12%   | 73%     | 7%         | 2%    | 6%    |
+| 2010 | 12%   | 77%     | 3%         | 2%    | 6%    |
+
+Peruvian Racial and Ethnic Self-Descriptions, 2006-2010
 
 
 ## 
@@ -434,12 +446,12 @@ Evo Morales's Indigenist Populism
 
 
 ---
+
 Could a populist political ideology built around the centrality of
 non-European identity help explain the shifts in ethnic identity in
 Venezuela and Peru?
 
 
-## 
 
 ---
 ### Experimental Design
@@ -512,8 +524,8 @@ sure that they are as good as they can and should be.
 ### Social Distance Measures
 
 <figure>
-<p><img src="Afroperuvian.jpg" alt="image" /><img
-src="Indigenousman.jpg" alt="image" /><img src="Femalelawyer.jpg"
+<p><img src="img/Afroperuvian.jpg" alt="image" /><img
+src="img/Indigenousman.jpg" alt="image" /><img src="img/Femalelawyer.jpg"
 alt="image" /></p>
 </figure>
 
@@ -524,20 +536,17 @@ alt="image" /></p>
 ### Bivariate ITT Results
 
 
-  -------------------------- ----------------- -----------
-  Social Distance From\...   Effect Estimate   $p$ value
-  Indigenous Man             1.78              0.081
-  Afroperuvian Man           0.26              0.79
-  Professional Woman         0.50              0.59
-  -------------------------- ----------------- -----------
+| Social Distance From\... | Effect Estimate | $p$ value | 
+|:------------------------:|:---------------:|:---------:|
+| Indigenous Man           | 1.78            | 0.081     |  
+| Afroperuvian Man         | 0.26            | 0.79      | 
+| Professional Woman       | 0.50            | 0.59      | 
 
 
 Sample includes 300 Peruvians selected randomly from among those walking
 in a collection of parks throughout the city on several evenings during
 September and October of 2017.
 
-
-## 
 
 ---
 ### Causal Forests Technique
@@ -551,17 +560,17 @@ September and October of 2017.
 (Lu, Sadiq, Feaster, and Ishwaran 2017)
 
 
-## 
 
 ---
 ### Causal Forests Results
 
 
-  ---------------- ----------------- -----------
-  Estimator        Effect Estimate   $p$ value
-  Bivariate        1.78              0.081
-  Causal Forests   2.11              0.034
-  ---------------- ----------------- -----------
+| Estimator      | Effect Estimate | $p$ value | 
+|:--------------:|:---------------:|:---------:|
+| Bivariate      | 1.78            | 0.081     |  
+| Causal Forests | 2.11            | 0.034     | 
+
+
 
 
 

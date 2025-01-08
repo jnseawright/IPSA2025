@@ -149,7 +149,11 @@ summ(draft71lm)
 
 
 ---
-![image](img/angrist.jpg)
+
+```{r, echo = FALSE, out.width="90%", fig.retina = 1, fig.align='center'}
+include_graphics("img/angrist.jpg")
+```
+
 
 
 ---
@@ -207,7 +211,10 @@ summ(draft71lm)
 ---
 ### Colonialism and Development
 
-![image](img/settlers4.PNG)
+```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
+include_graphics("img/settlers4.PNG")
+```
+
 
 
 ---
