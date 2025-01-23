@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Mixed Methods and Machine Learning: Design and Applications to the Study of the U.S. Far Right</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="J. Seawright" />
+    <script src="IPSA-2025-Talk_files/header-attrs-2.29/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Mixed Methods and Machine Learning: Design and Applications to the Study of the U.S. Far Right
+]
+.subtitle[
+## Afternoon Talk
+]
+.author[
+### <large>J. Seawright</large>
+]
+.institute[
+### <small>IPSA Summer School</small>
+]
+.date[
+### January 2025
+]
+
+---
+
+class: center, middle
+
+&lt;style type="text/css"&gt;
+pre {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 200px;
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+
+---
+### Mixed-Methods Literature Largely Focuses on Older Quantitative Tools
+
+
+---
+### We Can Use Key Ideas from Mixed-Methods Design with New Tools
+
+-   Combine methods based on strengths and weaknesses
+
+-   Identify assumptions in quantitative techniques and try to test those using 
+    qualitative designs
+    
+-   Use qualitative components to address questions about meaning, and quantitative
+    techniques to measure parameters
+
+
+---
+### Proposals
+
+1.  Enhance qualitative process tracing by using machine learning to broaden the 
+    range of subject matters explored
+
+2.  Machine learning to help position texts within large collections
+
+3.  Text as data methods to formalize qualitative concept analysis traditions
+
+4.  Qualitative reading as a supplement to standard machine-learning designs
+
+---
+### 1. Machine Learning to Enhance Process-Tracing
+
+-   It is much easier to add a new topic/theoretical theme to
+    qualitative research before it begins than after data collection is
+    complete.
+
+
+---
+
+1.  Collect some kind of data set related to the question of interest,
+    that is as inclusive as possible.
+
+2.  Use a machine-learning method to identify predictors related to the
+    topics of interest.
+
+3.  Treat those predictors as clues about themes to explore in
+    qualitative research.
+
+
+---
+### Example: Rise of the U.S. Alt-Right
+
+-   Alex Jones, InfoWars, and the Alt-Right
+
+-   It is likely that whatever is responsible for the growth of the
+    alt-right has left traces in the discussions on InfoWars broadcasts.
+
+
+---
+
+
+OLS regression minimizes: `\(\sum(Y - X \hat{\beta})^2\)`
+
+
+---
+
+
+Lasso regression minimizes:
+`\(\sum(Y - X \hat{\beta})^2 + \lambda |\hat{\beta}|\)`
+
+
+---
+###Alex Jones and the Proud Boys
+
+| Outcome    | Word                 | Coefficient | 
+| :--------: |:--------------------:|:-----------:| 
+| Alex Jones | Pappert              | 6.70        | 
+| Alex Jones | Sanctimoniously      | 6.63        | 
+| Alex Jones | 87778925398777892539 | 4.34        |
+| Alex Jones | Bolsonaro            | 4.22        |
+| Proud Boys | Zionist              | 0.11        |
+| Proud Boys | Loudmouth            | 0.08        | 
+| Proud Boys | Collusion            | 0.01        | 
+
+Words and Coefficients Associated With Alex Jones and the Proud Boys
+
+
+
+---
+### 2. Positioning Texts in a Collection
+
+-   Qualitative researchers often discuss texts drawn from large
+    collections, as a way of characterizing both the individual text and
+    the broader collection.
+
+
+---
+
+
+1.  Run a simple text-as-data model on the text collection as a whole.
+
+2.  Summarize the topics selected from the model using qualitative
+    readings of selected texts.
+
+3.  Use statistics related to the model to show how individual texts
+    selected for close reading relate to the collection as a whole, and
+    also to describe the overall population.
+
+
+---
+### Example: January 6th Legal Documents
+
+-   The main DOJ Jan. 6th website lists about 2,700 documents related to
+    cases against people involved with Jan. 6th.
+
+
+---
+![image](img/dojtopics.png)
+
+
+---
+![image](img/dojcaseselection.png)
+
+
+---
+-   Topics 3 and 7 are various kinds of judicial procedural documents,
+    shared across various kinds of cases.
+
+-   Topic 2 is mostly plea bargains, while topic 5 is mostly charge
+    sheets.
+
+
+---
+-   For Topic 1, the most representative text is a stipulation of facts
+    in the case of Jonathan Davis Laurens.
+
+
+---
+![image](img/jdlaurens.png)
+
+
+---
+![image](img/jdlaurens2.png)
+
+
+---
+![image](img/jdlaurens3.png)
+
+
+---
+-   The most-representative document for topic 4 is an FBI affidavit
+    about the activities of Brandon Nelson and Abram Markofski.
+
+
+---
+![image](img/nelsonmarkofski.png)
+
+
+---
+![image](img/nelsonmarkofski2.png)
+
+
+---
+-   Topic 6 is most typically represented by a statement of offense for
+    Daniel Ray Caldwell.
+
+
+---
+![image](img/caldwell.png)
+
+
+---
+![image](img/caldwell2.png)
+
+
+---
+![image](img/caldwell3.png)
+
+
+---
+![image](img/caldwell4.png)
+
+
+---
+-   With respect to topic 8, the most representative document is a
+    statement of offense for Matthew Capsel.
+
+
+---
+![image](img/capsel.png)
+
+
+---
+![image](img/capsel2.png)
+
+
+---
+![image](img/capsel3.png)
+
+
+---
+![image](img/capsel4.png)
+
+
+---
+-   With this framework, we can position specific documents we want to read qualitatively within the broader collection.
+
+- We can also get side benefits, like answering questions about the relative prevalence of different degrees of violence.
+
+
+---
+###Degrees of Violence
+
+| Topic                     | Average Membership   | 
+| :-----------------------: |:--------------------:|
+| 4 (Least Violence)        | 28%                  | 
+| 1 (Near Violence)         | 10%                  |
+| 6 (Violence)              | 3%                   | 
+| 8 (Violence, Recruitment) | 9%                   | 
+
+Texts' Average Degree of Topic Membership
+
+
+---
+-   Returning to our main agenda, suppose we want to closely read one case. To
+    pick an actually randomly selected example consider the statement of
+    facts connected with Joseph Howe. The model tells us that Howe
+    belongs in topic 8 (96% membership).
+
+
+---
+![image](img/howe.png)
+
+
+---
+![image](img/howe2.png)
+
+
+---
+![image](img/howe3.png)
+
+
+---
+![image](img/howe4.png)
+
+---
+### 3. Text as data methods to formalize qualitative concept analysis traditions
+
+---
+
+In the Sartori tradition, we want to:
+
+-   Choose usages that preserve the meanings of neighboring concepts
+
+-   Respect common and scholarly meanings for the terms in question
+
+-   Capture well-established core defining attributes
+
+-   Make sure that prototypical cases are sorted appropriately
+
+---
+
+1.  Collect all journal articles for a reasonable time window that use a word or 
+    set of words related to the topic of interest. Reading a random selection of these articles     may help reveal additional words worth including in the search process.
+
+2.  Use text-as-data models to understand the dimensionality and content of 
+    this collection.
+
+3.  Read examples from each topic to confirm ideas about the meanings at issue.
+
+
+
+---
+### Example: Extremism
+
+There are over 2000 articles in Political Science and Sociology journals
+since 1990 that use the concept of extremism ("extremists", etc.).
+
+
+---
+![image](img/extremismR1.png)
+
+
+---
+![image](img/extremismtopics.png)
+
+---
+### 4. Qualitative reading as a supplement to standard machine-learning designs
+
+Qualitative reading of underlying texts is a valuable robustness check, and a
+useful guide to meaning, in machine-learning designs generally.
+
+---
+
+1.  Carry out a standard quantitative analysis using text-as-data or other
+    machine-learning techniques.
+
+2.  Carry out qualitative in-depth reading of selected texts to confirm meaning
+    and to look for another source of evidence regarding the coherence of the analysis.
+
+3.  Interpret the results accordingly, and return to looking closely at the
+    assumptions behind the quantitative methods if coherence is not present.
+    
+
+---
+### Example: Women and the U.S. Far Right
+
+It is a topic of some interest, to scholars and the general public, that a
+number of women are active on almost all levels and in nearly all movements within
+the U.S. far right.
+
+---
+
+For the analysis presented here, our data involve a random sample of 1000 broadcasts
+on Alex Jones's InfoWars network since 2008.
+
+---
+
+For the analysis presented here, our data involve a random sample of 1000 broadcasts
+on Alex Jones's InfoWars network since 2008.
+
+---
+
+1.  Individual speech turns and speaker identities were analyzed using Pyannote.
+
+2.  Determine the probability that each speech turn was a female voice based on Wagner, J., Wierstorf, H., Burkhardt, F., Eyben, F., &amp; Schuller, B. W. (2023). Model for Age and Gender Prediction based on Wav2vec 2.0 (1.0.0). Zenodo. &lt;https://doi.org/10.5281/zenodo.7761387&gt;
+
+3.  Transcribe the text of each speech turn using WhisperAI.
+
+---
+
+We then applied the BERTopic embedding-based text-as-data model to discover topics
+in the speech turns.
+
+---
+
+![image](img/topics.PNG)
+
+---
+###Selecting a high-probability transcript from Topic 1.
+
+---
+
+On the vaccine said I'm gonna stop but I noticed a lot of calls are on that Because they're coming all the world before inoculations just people are waking up 50 years ago in new guinea or places in Africa or wherever people went up to the white witch doctors and they wanted shots They wanted help now they run My baby died at the shot Her baby died at the shot They don't need medical degrees to know what's going on and then in Africa and India They test the shot and they find what they're adding to it hormones So your body creates an autoimmune response to the hormone so then your body has an autoimmune response attacking your ovaries That's the woman's wavos 
+
+---
+
+That's what Gardasil attacks what it all does and to understand this i remember like 10 years ago the h1n1 virus They admitted that it was a live virus Not attenuated live engineered But not to quote not hurt you so they could quote track it to the next year Then you had the giant h1n1 outbreak because it mutated into something bad. It was all planned Now they're putting out they approved a month ago a month ago. It was in the middle of December Live ebola vaccines people are taking them here in the us It sheds Yeah But You it sheds the ebola and you get it and they have no freaking idea what it's going to do big pharma bill them When the gates say just just take it and trust us 
+
+---
+
+It's genetically engineered and then the un says in our own videos They go we don't we're not testing any of this We just believe them and we don't have any studies and we don't know They don't even know what the adjuvants are doing but they do But now all these big sinister big pharma companies those are the folks that brought you Hitler his main financiers literally look it up They had something special for you that an electron microscope can't read little something special they made and if you try to sue them they go oh CRISPR is patented and proprietary We're not going to let you know and anyone that ever tries to scan because they have other machines like CRISPR now An Italian firm was last year trying to scan Some of the these vaccines Read what they've done and they got swat teamed.
+
+---
+
+-   The opening monologue of the episode was also about how vaccines were allegedly killing people.
+
+-   The theme of vaccine scientists, bureaucrats, and pharmaceutical companies conspiring to deliberately kill people came up at least six more times scattered through the episode.
+
+---
+###Selecting a high-probability transcript from Topic 4.
+
+---
+
+i've seen the product of the leftist indoctrination in k through 12 schools i go to school with these people um and i want to stop that and i also i mean i want to protect kids like the name says um so i'm going to be going to these local dfw school board meetings and testifying um right now there's so many school districts in dfw that are allowing sexually explicit books in their libraries they're promoting crt even though they're not allowed to they kind of sneak it in um as well as gender theory that shouldn't be being discussed in k through 12 schools so i'm going to go testify against that stuff 
+
+---
+
+um we're also planning on um coming up going to a board of trustees member from ut southwestern medical center um they recently had a gender clinic shut down but they kind of just like took the name off the website and integrated the um gender for me care for minors into other programs to kind of get people off their case so um yeah i'm really just planning on going on advocating for children and um you know hopefully kind of taking back um some of the culture
+
+---
+
+![image](img/womenmultinom.PNG)
+
+---
+###Future Steps
+
+1.  Case studies to look at how women vs. men address these topics.
+
+2.  Statistical analysis of tone within topics.
+
+3.  Case studies to look at whether/how women leverage these appearances to advance
+    far-right political careers.
+    
+4.  Better statistical model to replace the initial multinomial logit.
+
+---
+### Conclusions
+
+1.  Mixed-method designs using machine learning are an exciting and substantially open area.
+
+2.  Text-as-data and other machine-learning methods can add a lot to traditional qualitative studies.
+
+3.  Qualitative methods can add approaches for checking meaning and verifying coherence to machine-learning studies.
+    
+4.  No doubt other possibilities exist!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
