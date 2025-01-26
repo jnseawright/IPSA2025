@@ -298,7 +298,7 @@ $\mathbf{X}_{i}$ that is relevant to causal inference.
 ### Application: Female Legislators
 
 ```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
-include_graphics("img/rscwomen.JPG")
+include_graphics("img/rscwomen.jpg")
 ```
 
 
@@ -372,7 +372,7 @@ $R^2$ = 0.008
 ### Comparing Cases
 
 ```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
-include_graphics("img/ptmatches.JPG")
+include_graphics("img/ptmatches.jpg")
 ```
 
 ---
@@ -392,47 +392,47 @@ Choosing Cases for In-Depth Study:
 ---
 
 ```{r, echo = FALSE, out.width="90%", fig.retina = 1, fig.align='center'}
-include_graphics("img/ptfulltable.jpg")
+include_graphics("img/ptfulltable.JPG")
 ```
 
 
 ---
 ###France
 
-![image](img/franceelectoralsystem.jpg)
+![image](img/franceelectoralsystem.JPG)
 
 
 ---
-![image](img/france2017.jpg)
+![image](img/france2017.JPG)
 
 
 ---
 ###Japan
 
-![image](img/japanelectoralsystem.jpg)
+![image](img/japanelectoralsystem.JPG)
 
 
 ---
-![image](img/japan2017.jpg)
+![image](img/japan2017.JPG)
 
 ---
 ###Fiji
 
-![image](img/fijielectoralsystem.jpg)
+![image](img/fijielectoralsystem.JPG)
 
 
 ---
-![image](img/fiji2018.jpg)
+![image](img/fiji2018.JPG)
 
 
 ---
 ###Malta
 
-![image](img/maltaelectoralsystem.jpg)
+![image](img/maltaelectoralsystem.JPG)
 
 
 ---
-![image](img/malta2017.jpg)
+![image](img/malta2017.JPG)
 
 
 ---

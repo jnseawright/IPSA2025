@@ -101,7 +101,7 @@ style_mono_accent(
 
 
 ---
-![image](img/bradymcnulty.jpg)
+![image](img/bradymcnulty.JPG)
 
 
 ---
@@ -151,7 +151,7 @@ summ(draft71lm)
 ---
 
 ```{r, echo = FALSE, out.width="90%", fig.retina = 1, fig.align='center'}
-include_graphics("img/angrist.jpg")
+include_graphics("img/angrist.JPG")
 ```
 
 
@@ -190,7 +190,7 @@ include_graphics("img/angrist.jpg")
 ### Colonialism and Development
 
 
-![image](img/settlers1.PNG)
+![image](img/settlers1.png)
 
 
 
@@ -198,21 +198,21 @@ include_graphics("img/angrist.jpg")
 ---
 ### Colonialism and Development
 
-![image](img/settlers2.PNG)
+![image](img/settlers2.png)
 
 
 
 ---
 ### Colonialism and Development
 
-![image](img/settlers3.PNG)
+![image](img/settlers3.png)
 
 
 ---
 ### Colonialism and Development
 
 ```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
-include_graphics("img/settlers4.PNG")
+include_graphics("img/settlers4.png")
 ```
 
 

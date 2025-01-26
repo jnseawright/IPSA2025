@@ -220,21 +220,21 @@ Treatment 2 adds:
 ---
 
 ```{r, echo = FALSE, out.width="70%", fig.retina = 1, fig.align='center'}
-include_graphics("img/blmemotions.jpg")
+include_graphics("img/blmemotions.JPG")
 ```
 
 
 
 ---
 
-![image](img/blmalinsky.jpg)
+![image](img/blmalinsky.JPG)
 
 
 
 ---
 
 ```{r, echo = FALSE, out.width="80%", fig.retina = 1, fig.align='center'}
-include_graphics("img/blmpotus.jpg")
+include_graphics("img/blmpotus.JPG")
 ```
 
 
@@ -468,7 +468,7 @@ identity.
 
 
 ---
-![image](img/rootelementsperuviannation.jpg)
+![image](img/rootelementsperuviannation.JPG)
 
 
 ---
