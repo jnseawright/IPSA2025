@@ -42,7 +42,7 @@ Labs:
 * [Thursday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-4.html)
 * [Friday](https://jnseawright.github.io/IPSA2025/Extensions%20Labs/IPSA-2025-Extensions-Lab-5.html) 
 
-
+[Wednesday Seminar Slides](https://jnseawright.github.io/IPSA2025/Afternoon%20Talk/IPSA-2025-Talk.html#1)
 
 
 
