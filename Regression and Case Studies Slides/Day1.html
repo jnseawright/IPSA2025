@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Module 1: Foundations of Multi-Method Design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jaye Seawright" />
+    <script src="Day1_files/header-attrs-2.30/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Module 1: Foundations of Multi-Method Design
+]
+.subtitle[
+## Pairing Case Studies with Regression
+]
+.author[
+### <large>Jaye Seawright</large>
+]
+.institute[
+### <small>IPSA Summer School</small>
+]
+.date[
+### Day 1
+]
+
+---
+
+
+class: center, middle
+
+&lt;style type="text/css"&gt;
+pre {
+  max-height: 400px;
+  overflow-y: auto;
+}
+pre[class] {
+  max-height: 200px;
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+## Block 1: Why Integrate? Roles of Qualitative Work
+
+---
+
+### Why Mixed-Method Research?
+
+&lt;img src="img/multimethodgoogle.jpeg" width="50%" style="display: block; margin: auto;" /&gt;
+
+In 2024:
+- 7,690 instances of "OLS regression"
+- 1,470 instances of "multi-method"
+- 29,500 instances of "mixed-method"
+
+---
+### Lieberman's Paradigm
+
+&lt;img src="liebermanarticle1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="liebermanbook1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="liebermanbook2.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="liebermanbook3.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+### A Newer Example
+
+Why do some states in the U.S. have many fewer laws about labor than
+other states?
+
+
+---
+### Galvin and Seawright (2023)
+
+Probably it has something to do with unions?
+
+
+---
+
+&lt;img src="galvin1.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin2.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin3.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="galvin4.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin5.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="galvin6.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="galvin7.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="galvin8.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin9.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin10.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin11.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="galvin12.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+### A Different Kind of Example
+
+Laitin and Fearon (2003) report statistical evidence of a connection
+between mountainous terrain and civil war.
+
+
+---
+### A Different Kind of Example
+
+Logit coefficients for the relationship range between 0.12 and 0.42.
+
+
+---
+### A Different Kind of Example
+
+&lt;img src="colombiamountains.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+### A Different Kind of Example
+
+Colombia experienced civil war through much of the 19th century
+
+
+---
+### A Different Kind of Example
+
+&lt;img src="laviolencia.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+### A Different Kind of Example
+
+&lt;img src="colombiafarc.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+### A Different Kind of Example
+
+&lt;img src="columbia_farc_02.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+### A Different Kind of Example
+
+&lt;img src="bogota.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### What Is Multi-Method Research?
+
+**Triangulation**  
+Combination of research designs from more than one methodological family, each aimed at providing *separate* answers to a research question.
+
+**Integrative Multi-Method Research**  
+Techniques drawn from more than one methodological family used in the course of answering a *single integrated* research question or testing a *single overarching* hypothesis.
+
+---
+
+### The Paradigmatic Case: Snow on Cholera (1855)
+
+- John Snow correctly identified cholera's mode of transmission.
+- **Quantitative component:** Data on mortality rates by water company.
+- **Qualitative component:** Interviews with residents to determine knowledge of water source, etc., case histories.
+
+---
+### Agenda
+
+1.  Integration and the potential outcomes framework
+
+2.  Causal inference and regression
+
+3.  How qualitative research contributes to causal inference
+
+4.  Case selection
+
+5.  Assumption-testing research designs for regression/case studies
+
+
+---
+### Agenda
+
+6.  Qualitative methods and experiments
+
+7.  Qualitative methods and natural experiments
+
+8.  Machine learning and qualitative causal inference
+
+9.  Machine learning, qualitative methods, and other goals
+
+---
+### A Spectrum of Arguments about Multiple Methods
+
+-   Social-science methods never teach us anything
+
+-   One family of research is always better than the others
+
+-   Quantitative and qualitative research can never communicate
+
+-   Triangulation
+
+-   Integration
+
+
+---
+### Goertz and Mahoney
+
+Qualitative and quantitative research speak different languages because
+of differences in ontology.
+
+
+---
+### Concepts of Causation
+
+Potential Outcomes Framework
+
+`\(T_{i}\)`, `\(Y_{i,t}\)`
+
+
+---
+### Concepts of Causation
+
+Necessary Causation
+
+`\(Y_{i,0} = 0\)` for all `\(i\)`.
+
+
+---
+### Concepts of Causation
+
+Sufficient Causation
+
+`\(Y_{i,1} = 1\)` for all `\(i\)`.
+
+
+---
+### Concepts of Causation
+
+Causal Pathways
+
+`\(T_{i}\)`
+
+`\(M_{i,t,1}\)`, `\(M_{i,t,m1,2}\)`, `\(M_{i,t,m1,m2,3}\)`, etc
+
+`\(Y_{i,t,m1,m2,m3}\)`
+
+
+---
+### Four Traditions of Causal Thought
+
+Humean Regularity Theory
+
+Counterfactual Theory
+
+Manipulation Theory
+
+Capacities and Mechanisms
+
+
+---
+### Regularity Theory
+
+Finding stable, predictive patterns is the goal of causal inference in this tradition.
+
+-   One might think of econometrics, time-series analysis, and data science as paradigms here.
+
+-   But, on the qualitative side, comparative method, set theory, and QCA strategies fit, as well.
+
+---
+### Counterfactuals
+
+Analyzing causation involves figuring out what would have happened had the cause actually (not) happened in a given case.
+
+-   One might think paradigmatically of qualitative research (e.g., Harvey 2012).
+
+-   Counterfactual thinking is central to how quantitative researchers think about difference-in-differences, regression-discontinuity designs, the range of cases for which a regression is valid, etc.
+
+
+---
+### Manipulation
+
+Manipulationist theories of causation argue that doing a change to an independent variable is the only real way to see its causal effect on a dependent variable.
+
+-   One might think paradigmatically of social-science experiments.
+
+-   Thinking about manipulations also helps define plausible and implausible counterfactuals in quantitative observational studies.
+
+-   Similar ideas in qualitative thinking are framed as "agency" and "process causality."
+
+---
+### Capacities and Mechanisms
+
+The idea here is that the world consists of collections of entities with certain innate traits and abilities ("capacities") arranged in certain ways ("mechanisms") that bring about the outcomes or events of interest. Causes and effects are not generic constants or distributions; they are contingent products of interactions within systems.
+
+---
+### Capacities and Mechanisms
+
+-   Quantitative research may capture some aspect of this through effect heterogeneity.
+
+-   Better is to study pathways and directly analyze differences.
+
+-   Qualitative researchers may be interested in directly describing arrangements of capacities as part of a research strategy.
+
+---
+### Florida, 2000
+
+-   Brady (2004)
+
+
+---
+### Florida, 2000
+
+-   John Lott (2000) uses regression to estimate that early media calls
+    in the Florida panhandle cost George W. Bush at least 10,000 votes.
+
+
+---
+### Florida, 2000
+
+`\(303,000 * \frac{1}{72} \approx 4,200\)`
+
+-   Census data from 1996 suggest that about 1/12 of voters go to the
+    polls during the last hour.
+
+-   The call was made with 10 minutes to go, so perhaps 1/72 of voters
+    who would have voted had not yet arrived at the polls.
+
+
+---
+### Florida, 2000
+
+`\(303,000 * \frac{1}{72} * \frac{1}{5} \approx 840\)`
+
+-   Research on media exposure suggests that 20% or fewer of people in
+    the panhandle would have heard the media call during the 10 minutes
+    before the polls closed.
+
+
+---
+### Florida, 2000
+
+`\(303,000 * \frac{1}{72} * \frac{1}{5} * \frac{2}{3} \approx 560\)`
+
+-   Bush was supported by about 2/3 of panhandle voters.
+
+
+---
+### Florida, 2000
+
+`\(303,000 * \frac{1}{72} * \frac{1}{5} * \frac{2}{3} * \frac{1}{10} \approx 56\)`
+
+-   Prior quantitative research suggests that about 10% of intended
+    voters who hear an early call before they arrive at the polls may be
+    dissuaded from voting.
+
+
+---
+### Rights and Liberties
+
+-   Survey research on tolerance, civil liberties, individual rights
+
+-   In-depth analysis of 30 think-aloud transcripts from a survey
+    pretest
+
+
+---
+### Rights and Liberties
+
+-   Do citizens anchor their opinions to what they understand of current
+    law?
+
+
+---
+### Rights and Liberties
+
+Q. Do you think that a person who is caught red-handed deserves a full
+blown trial?
+
+A. Yeah, I think that's one of our rights. I think that's in the Bill of
+Rights that, uhh, you have the right to a trial. Uhh how, what defense
+the attorney would take I don't know. I mean it --- but again it's a
+matter of making the punishment fit the crime which I think a trial,
+that's one purpose of a trial. I mean I don't think a man that's
+stealing a loaf of bread should be executed. And I think a trial would
+bring out, uh, how serious the crime was and maybe there were some
+mitigating circumstances. And I think all that's part of a trial. So I
+think anyone deserves a trial.
+
+
+---
+### Rights and Liberties
+
+Q. What if the police stop someone for weaving dangerously in traffic.
+Do they have the right to search the glove compartment or trunk of the
+car if they suspect that he's on drugs?
+
+A. I think the courts have said that they haven't, isn't that what they
+courts have said? Well, you hear verdicts where it's on and off but it,
+it seems to me that they, they probably shouldn't.
+
+
+---
+
+class: center, middle
+
+# Block 2: Case Selection for Regression Designs
+
+---
+
+### The Challenge: Which Cases to Study In-Depth?
+
+- We cannot conduct in-depth case studies of all 150+ countries (or 50 U.S. states, or 10,000 individuals).
+- Case selection must be **deliberate** and **helpful**.
+- Goal: Ensure **maximum probability of meaningful discoveries** when moving from large-N to small-n.
+
+---
+
+### Typical Cases
+
+**Definition:** Cases that lie close to the regression line.
+
+`$$\text{Typicality}_{i} = - \left| y_{i} - \hat{y}_{i} \right|$$`
+
+- Useful for: Demonstrating the central causal pathway under *average* conditions.
+- If the mechanism works here, it likely works generally.
+
+---
+
+&lt;img src="img/typicality.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Deviant Cases (Outliers)
+
+**Definition:** Cases with large residuals (poorly predicted by the model).
+
+`$$\text{Deviantness}_{i} = \left| y_{i} - \hat{y}_{i} \right|$$`
+
+- Useful for:
+  - Discovering **weak omitted variables**
+  - Testing for **measurement error** in the dependent variable
+  - Exploring **causal pathways** where the causal effect is unusually large
+  - Identifying *scope conditions* of the theory
+
+---
+
+### Extreme Cases on `\(X\)`
+
+**Definition:** Cases far from the mean on the independent variable of interest.
+
+`$$\text{Extremity}_{i} = \left| \frac{x_{i} - \bar{x}}{s} \right|$$`
+
+- Useful for:
+  - Testing **measurement error** in the independent variable
+  - Discovering **confounders**
+  - Exploring causal pathways where the treatment is *strongest*
+  - Verifying that the relationship holds at the extremes
+
+---
+
+### Influential Cases
+
+**Definition:** Cases whose inclusion substantially changes the regression estimate.
+
+**Cook's Distance:** A statistical measure of how much the overall regression result changes if a given case is deleted.
+
+- Cook's D `\(\ge 1\)` indicates substantial influence.
+- Useful for:
+  - Checking **robustness** of findings
+  - Identifying cases that "drive" the results
+
+---
+
+&lt;img src="img/influence.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Summary: Case Selection and Assumptions
+
+| Case Type | Best for Testing |
+| :--- | :--- |
+| Typical | Nothing, really |
+| Deviant | Weak omitted variables, measurement error in `\(Y\)`, Causal pathways |
+| Extreme on `\(X\)` | Measurement error in `\(X\)`, Causal pathways |
+| Influential | Robustness, I guess? |
+
+**Key Insight:** The choice of case depends on *which assumption* you are most worried about, but most goals can be met with either deviant cases or extreme cases on `\(X\)`.
+
+---
+### Propensity-Adjusted Extreme Cases
+
+We've discussed typical, deviant, extreme, and influential cases.
+
+But there's a problem...
+
+---
+
+## The Problem with Unadjusted `\(X\)`
+
+Cases extreme on `\(X\)` may also be extreme on *all* the control variables.
+
+- **Overdetermination:** Everything pushes in the same direction.
+- **Messy process tracing:** Hard to isolate the pathway of interest.
+- **Inert case selection:** Once you pick them, they never change—even after you learn about new confounders.
+
+Can we do better?
+
+---
+
+## Introducing "Surprising Causes"
+
+**Galvin and Seawright (2023)** propose:
+
+&gt; Select extreme cases on the **propensity-adjusted** version of the treatment variable.
+
+Intuition:
+- Cases where the value of `\(X\)` is **as surprising as possible** given the control variables.
+- Cases where `\(X\)` is unusually high *despite* controls suggesting it should be low (or vice versa).
+
+---
+
+## Formal Definition: Propensity-Adjusted `\(X\)`
+
+1. Regress the treatment variable `\(X\)` on all measured confounders `\(\mathbf{Z}\)`:
+   `$$X_i = \gamma_0 + \gamma_1 Z_{1i} + \gamma_2 Z_{2i} + \dots + \gamma_k Z_{ki} + u_i$$`
+
+2. Compute the fitted values `\(\hat{X}_i\)` (the *expected* treatment given controls).
+
+3. The **propensity-adjusted treatment** is the residual:
+   `$$X_i^* = X_i - \hat{X}_i$$`
+
+4. Select cases with the **largest absolute values** of `\(X_i^*\)`.
+
+---
+
+## Why "Surprising"?
+
+If `\(X\)` is positively correlated with the controls:
+
+- A **positive surprise** (`\(X_i^* \gg 0\)`): Treatment is high, but controls are low.
+- A **negative surprise** (`\(X_i^* \ll 0\)`): Treatment is low, but controls are high.
+
+These are the cases where the treatment *defies expectations* based on known confounders.
+
+---
+
+## Visual Intuition
+
+.pull-left[
+**Unadjusted Extreme on `\(X\)`**
+- Treatment is high, controls are *also* high.
+- Causal pathways may be overdetermined.
+]
+
+.pull-right[
+**Surprising Cause (`\(X^*\)` extreme)**
+- Treatment is high, controls are *low*.
+- Pathway of `\(X\)` is isolated from known confounders.
+]
+
+---
+
+&lt;img src="Day1_files/figure-html/unnamed-chunk-26-1.png" width="40%" /&gt;
+
+*Simulated data: Red points are selected as "extreme" under each method.*
+
+---
+
+## Statistical Efficiency Argument
+
+For discovering:
+- **Measurement error** in `\(X\)`
+- **Causal pathways** (`\(M_X\)`, the unconfounded mediator)
+- **New confounders**
+
+The propensity-adjusted `\(X^*\)` has a **stronger expected correlation** with the unknown quantity of interest than unadjusted `\(X\)`.
+
+*Why?* Because `\(\hat{X}\)` captures variance already explained by known controls. Removing it reduces noise without losing signal.
+
+*(See Galvin &amp; Seawright 2023, pp. 1639-1641 for the formal proof.)*
+
+---
+
+## Practical Advantages
+
+| Feature | Unadjusted Extreme `\(X\)` | Surprising Causes (`\(X^*\)`) |
+|:--------|:----------------------:|:-------------------------:|
+| Avoids overdetermination | No | Yes |
+| Adjusts as knowledge accumulates | No | Yes |
+| Facilitates iterative research cycles | No | Yes |
+| Pathway case logic (isolated pathway) | Weak | Strong |
+
+---
+
+## How to Compute in R
+
+
+``` r
+# Step 1: Run auxiliary regression
+aux_model &lt;- lm(treatment ~ control1 + control2 + control3, data = df)
+
+# Step 2: Extract residuals (propensity-adjusted X)
+df$X_star &lt;- residuals(aux_model)
+
+# Step 3: Identify surprising causes (e.g., top 5 absolute residuals)
+df$abs_X_star &lt;- abs(df$X_star)
+surprising_cases &lt;- df[order(df$abs_X_star, decreasing = TRUE), ][1:5, ]
+```
+
+---
+
+## Application: Union Decline and Labor Laws
+
+**Galvin and Seawright (2023)**
+- **Research question:** Why do some U.S. states enact more employment laws than others?
+- **Initial regression:** Union density decline `\(\rightarrow\)` Fewer employment laws.
+- **Problem:** Union density is correlated with economic and political factors.
+
+---
+
+## Step 1: Initial Model
+
+
+
+The authors then compute the propensity-adjusted version of **union density decline**:
+
+
+---
+
+## Step 2: Identifying Surprising Cases
+
+Extreme cases on `\(X^*\)` (union decline residual):
+
+&lt;img src="img/galvin3.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+- **Indiana:** Union density declined *far more* than expected given its economic/political profile.
+- **New York:** Union density declined *far less* than expected.
+
+---
+
+## Step 3: Discovery from Case Studies
+
+**Indiana and New York** prompted a closer look at the *measurement* of union density.
+
+Disaggregating into **private-sector** and **public-sector** components revealed:
+- Indiana's extreme decline was driven by *private-sector* losses.
+- New York's stability was driven by high *public-sector* union density.
+
+**Result:** The revised model showed that **baseline public-sector union density** was the key predictor—a finding missed by standard approaches.
+
+---
+
+## Step 4: Iterative Refinement
+
+The authors then:
+1. Re-ran the analysis with public-sector union density as the treatment.
+2. Computed *new* propensity-adjusted scores.
+3. Selected **Missouri** as the next surprising case.
+4. Discovered the role of state labor federations (AFL-CIO) and court-imposed bargaining limits.
+
+**Key insight:** The case-selection list *changed* as knowledge accumulated—enabling a productive multi-method research cycle.
+
+---
+
+## The Iterative Multi-Method Cycle
+
+1. Estimate regression with current knowledge.
+2. Compute propensity-adjusted `\(X^*\)`.
+3. Select and study surprising cases qualitatively.
+4. Revise measurement, add confounders, refine theory.
+5. Repeat.
+
+---
+
+## When to Use Surprising Causes
+
+| Goal | Recommended Case Type |
+|:-----|:----------------------|
+| Discover measurement error in `\(X\)` | Surprising causes (`\(X^*\)`) |
+| Discover causal pathway | Surprising causes (`\(X^*\)`) |
+| Find new confounding variables | Surprising causes (`\(X^*\)`) |
+| Test a known pathway | Typical or deviant cases |
+| Investigate extreme values of `\(Y\)` | Deviant cases |
+
+---
+### What Should We Do With Our Cases?
+
+Now that we've selected cases, what should we do with them?
+
+-   What goals for discovery, and corresponding qualitative designs, are most valuable in multi-method research?
+
+1.  Measurement tests
+2.  Confounding variables
+3.  Causal pathways (?)
+
+---
+### Measurement
+
+1.  Use in-depth exploration of one or a few cases for qualitative
+    correspondence test.
+
+2.  Process trace the quantitative measurement process to form a theory
+    for the causes of any errors.
+
+3.  Qualitatively examine a few other cases that would be likely to
+    suffer from the same kinds of errors to test the theory.
+
+4.  Revise the coding for all relevant cases.
+
+---
+
+## The Problem: Do Democracy Indices Measure What They Claim?
+
+We use quantitative indices like Polity IV, Vanhanen, and Gasiorowski as *dependent* or *independent* variables in regressions.
+
+**But what if the numbers are wrong?**
+
+- Bowman, Lehoucq, and Mahoney (2005) systematically compare three leading democracy indices for five Central American countries.
+- Their finding: **Data-induced measurement error is pervasive.**
+
+---
+
+## How Bad Is the Disagreement?
+
+For the same countries in the same years, the indices frequently diverge by massive margins.
+
+| Country | Years with Major Disagreement (≥10 points on 0–20 scale) |
+|:--------|:--------------------------------------------------------:|
+| Costa Rica | 58 (all before 1958) |
+| Honduras | 49 |
+| Guatemala | 36 |
+| El Salvador | 30 |
+| Nicaragua | 10 |
+
+---
+
+Correlations among indices for the first half of the 20th century average **only 0.22**.
+
+---
+
+## Why Do They Disagree? It's Not the Aggregation Rules
+
+Bowman et al. compare their own index (BLM) with Mainwaring, Brinks, and Pérez-Liñán (MBP).
+
+- The two indices use **nearly identical** conceptualization and aggregation rules.
+- Yet correlations are only **0.59 for Costa Rica** and **0.77 for Honduras**.
+
+**Conclusion:** The problem is *not* primarily about how we add up scores.  
+The problem is **knowing what actually happened** in each country-year.
+
+---
+
+## The Costa Rica Example: A "Perfect Democracy" with a Military Coup
+
+.pull-left[
+**Polity IV codes Costa Rica as a perfect democracy (+10) for *every year* from 1900 to 1999.**
+
+This implies:
+- Fully competitive elections
+- Full civilian control of the military
+- No restrictions on participation or liberties
+]
+
+.pull-right[
+**What actually happened in Costa Rica?**
+
+- **1917:** Minister of Defense Federico Tinoco overthrew President Alfredo González in a military coup.
+- **1948:** A civil war brought the Revolutionary Junta to power, which governed for 18 months without elections.
+]
+
+---
+
+## Why Did Polity IV Get It So Wrong?
+
+**Source:** Bowman, Lehoucq, and Mahoney (2005, p. 8)
+
+&gt; "The erroneous idea that Costa Rica has been democratic since 1889... can be found not only in travel guides but also in scholarly writing and reference books."
+
+The coders relied on **superficial secondary sources** that repeated the myth of uninterrupted Costa Rican democracy.
+
+---
+
+**Qualitative case expertise reveals:**
+- Federico Tinoco's 1917 coup (U.S. diplomatic records document it)
+- Electoral fraud in the 1948 election (archival research shows Otilio Ulate likely lost)
+- Political persecution and restricted competition in the 1950s
+
+---
+## Next Step
+
+- Let's form a general hypothesis:
+
+&lt;img src="Day1_files/figure-html/unnamed-chunk-31-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+-   What are some other countries that would represent excellent examples of a myth of continuous national democracy?
+
+-   Do any of those countries have issues in their democratic history that we might want to double-check in terms of democracy scores?
+
+---
+
+&lt;img src="img/polityus.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+### Mechanisms vs. pathways
+
+What is a **causal mechanism**?
+
+
+---
+### Can Process Tracing Test Causal Pathways?
+
+-   Much depends on causal inference. Judea Pearl has shown that one can measure causal pathways via a process-tracing-like logic using a pair of assumptions.
+
+
+---
+### Assumptions for Testing Causal Pathways
+
+-   Is the causal pathway "isolated" from other causal factors?
+
+-   Is the causal pathway "exhaustive"?
+
+
+---
+
+&lt;img src="img/glynnfrontdoor.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="img/frontdoordag.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="img/frontdoorvar.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+&lt;img src="img/frontdoormen.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="img/frontdoorwomen.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+### Exploring Outliers
+
+- Do we need to account for every outlier in a regression?
+
+---
+### Exploring Outliers
+
+&lt;img src="img/freedmanpetiti.PNG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+### Confounders
+
+1.  Trace the causes of the cause, then forward to `\(Y\)`: triangular
+    process-tracing design.
+
+2.  Examine the `\(X\)` to `\(Y\)` causal pathway for any influence by potential
+    causes of the cause.
+
+
+---
+
+### A Crucial Point: Control Variables and Causal Assumptions
+
+Not all control variables are created equal.  
+Some controls *create* bias rather than remove it.
+
+---
+
+### Good Control Variables
+
+A good control is a **confounder**: it causes both the treatment and the outcome.
+
+
+&lt;img src="img/goodcontrol.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+Controlling for the confounder blocks the non-causal pathway.
+
+---
+
+### Harmful Control Variables: Post-Treatment Bias
+
+Controlling for a variable that is **caused by the treatment** introduces bias by removing part of the relevant causal story.
+
+&lt;img src="img/harmfulcontrol2.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+*Example:* Controlling for "trust in government" when estimating the effect of democracy on growth (democracy may affect trust).
+
+---
+
+### Harmful Control Variables: Collider Bias
+
+Controlling for a **collider** (a common *effect* of treatment and outcome) induces a spurious correlation.
+
+&lt;img src="img/harmfulcontrol3.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+*Example:* Controlling for "being a swing state" when studying campaign spending and vote share.
+
+---
+
+Can we use qualitative evidence to help differentiate among these categories of variables?
+
+---
+
+class: center, middle
+
+# Block 3: Hands-On Lab – Regression Diagnostics &amp; Case Selection
+
+---
+
+### Lab Objectives
+
+1. Run a regression on the `inequality` dataset.
+2. Interpret coefficient changes when adding control variables.
+3. Identify deviant and extreme cases using R.
+4. Design a qualitative follow-up for selected cases.
+
+---
+
+### Step 1: Load and Explore the Data
+
+
+``` r
+inequality &lt;- read.csv("https://raw.githubusercontent.com/jnseawright/practice-of-multimethod/main/data/inequality.csv")
+names(inequality)
+head(inequality)
+```
+
+- **Gini:** Gini coefficient (inequality, 0–100)
+- **Polity:** Polity IV democracy score (-10 to +10)
+- **GDP:** GDP per capita
+- **Country:** Country name
+
+---
+
+### Step 2: Bivariate Regression
+
+
+``` r
+m1 &lt;- lm(OUTCOMEVARIABLE ~ TREATMENTVARIABLE, data = inequality)
+summary(m1)
+```
+
+- What is the estimated relationship between democracy and inequality?
+- Is it statistically significant?
+- Is it *causally* identified? What assumptions are required?
+
+---
+
+### Step 3: Add a Control Variable
+
+
+``` r
+m2 &lt;- lm(OUTCOMEVARIABLE ~ TREATMENTVARIABLE + CONTROLVARIABLE(S), data = inequality)
+summary(m2)
+```
+
+- How does the coefficient on `Polity` change?
+- Why might controlling for GDP matter?
+- Is GDP a *good* control or a *bad* control? Draw a DAG.
+
+---
+
+### Step 4: Identify Deviant Cases
+
+
+``` r
+inequality$residuals &lt;- residuals(m2)
+inequality$deviance &lt;- abs(inequality$residuals)
+
+# Top 5 deviant cases
+inequality[order(inequality$deviance, decreasing = TRUE), 
+           c("Country", "Gini", "Polity", "GDP", "residuals")][1:5, ]
+```
+
+- Which countries are most poorly predicted by the model?
+- What might explain their large residuals? (Measurement error? Omitted variables?)
+
+---
+
+### Step 5: Identify Extreme Cases on `\(X\)`
+
+
+``` r
+# Extreme on Polity (democracy)
+inequality$extreme_polity &lt;- abs(inequality$Polity - mean(inequality$Polity, na.rm = TRUE))
+inequality[order(inequality$extreme_polity, decreasing = TRUE), 
+           c("Country", "Polity")][1:5, ]
+```
+
+- Which countries are most democratic? Most autocratic?
+- Why might we want to study these extremes?
+
+---
+
+### Group Activity: Designing Qualitative Follow-Ups
+
+**Scenario:** You have selected **Yemen** and **Zimbabwe** for in-depth study.
+
+**Task (15 minutes in small groups):**
+
+1.  Reverse engineer the case-selection rule. How were these two cases chosen from the data and the models that you've used so far today?
+
+---
+
+2. For **Yemen**: What qualitative evidence would you gather to discover:
+   - Sources of measurement error, especially in the main causal variable?
+   - An omitted confounder
+   - Any ideas about causal pathways
+
+---
+
+3. For **Zimbabwe**: What qualitative evidence would you gather to discover:
+   - Sources of measurement error, especially in the main causal variable?
+   - An omitted confounder
+   - Any ideas about causal pathways
+ 
+4. Are there any changes we should want to make to our regressions based on these cases?
+
+---
+
+### Wrap-Up: Snow on Cholera Revisited
+
+Let's return to [John Snow](https://johnsnow.matrix.msu.edu/documentUploads/15-78-52/15-78-52-22-1855-MCC2.pdf). Focus on pages 68-81.
+
+- Identify the **quantitative** components of Snow's argument.
+- Identify the **qualitative** components.
+- How did Snow's integration of methods make his causal inference more powerful than a purely quantitative or purely qualitative study would have been?
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "ratio": "16:9",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

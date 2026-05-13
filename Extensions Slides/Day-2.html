@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Module 2: Experiments and Natural Experiments</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="J. Seawright" />
+    <script src="Day-2_files/header-attrs-2.30/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Module 2: Experiments and Natural Experiments
+]
+.subtitle[
+## Pairing Case Studies with Random and As-If Random Designs
+]
+.author[
+### <large>J. Seawright</large>
+]
+.institute[
+### <small>IPSA Summer School</small>
+]
+.date[
+### Day 2
+]
+
+---
+
+
+class: center, middle
+
+&lt;style type="text/css"&gt;
+pre {
+  max-height: 400px;
+  overflow-y: auto;
+}
+pre[class] {
+  max-height: 200px;
+}
+&lt;/style&gt;
+
+
+
+
+
+---
+
+## Block 1: Natural Experiments as "As-If" Random Designs
+
+---
+
+### Module 2 Overview
+
+**Today's Focus:**
+- Natural experiments: when nature randomizes (or nearly does)
+- True experiments: when we control randomization
+- Pairing case studies with both frameworks
+- Case selection strategies for experimental data
+
+**Key Question:** How do we design qualitative components to test the assumptions that make experimental and natural-experimental designs valid?
+
+---
+
+### Typology of Natural Experiments
+
+1. **Classic Natural Experiment:** "Nature" randomizes the treatment directly.
+2. **Instrumental Variables-Type Natural Experiment:** "Nature" randomizes a cause of the treatment.
+3. **Regression-Discontinuity Design (RDD):** Assignment based on a threshold on a continuous variable.
+
+Each requires **different qualitative strategies** to validate assumptions.
+
+---
+
+### Classic Natural Experiment
+
+**Definition:**
+1. Nature randomizes the treatment.
+   - All confounding variables (observable and unobservable) are balanced.
+   - No discretion in assignment, or the relevant information is unavailable/unused.
+2. The randomized treatment has the same effect as non-randomized treatment would have.
+
+**Example:** Snow on Cholera (natural variation in water source).
+
+---
+
+### Qualitative Tasks for Classic Natural Experiments
+
+- **Process trace the cause of the cause:** Why did "nature" assign treatment here and not there? Verify no human selection bias.
+- **Process trace mechanisms inside vs. outside the experiment:** Does the treatment operate the same way in the natural experiment as it would in the broader population?
+
+---
+
+### Example: Vietnam War Draft Lottery
+
+- **Natural Experiment:** Draft lottery randomly assigned birthdates to priority numbers.
+- **Treatment:** Draft eligibility (instrument for military service).
+- **Outcome:** Earnings, education, mortality.
+
+---
+
+&lt;img src="img/draftrandom.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+---
+
+``` r
+draft1970 &lt;- read_csv("data/draft1970.csv")
+```
+---
+
+``` r
+boxplot(rank~month, data=draft1970)
+```
+
+&lt;img src="Day-2_files/figure-html/unnamed-chunk-4-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+``` r
+draftlm &lt;- lm(rank ~ day, data=draft1970)
+```
+---
+
+``` r
+summ(draftlm)
+```
+
+&lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Observations &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 366 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Dependent variable &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; rank &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Type &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; OLS linear regression &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt; &lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; F(1,364) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 19.54 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; R² &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Adj. R² &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt; &lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Est. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; S.E. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; t val. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; p &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; (Intercept) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 224.91 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 10.81 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 20.80 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; day &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.23 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -4.42 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; Standard errors: OLS&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+---
+
+``` r
+draft1971 &lt;- read_csv("data/draft1971.csv")
+```
+---
+
+``` r
+boxplot(rank~month, data=draft1971)
+```
+
+&lt;img src="Day-2_files/figure-html/unnamed-chunk-8-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+``` r
+draft71lm &lt;- lm(rank ~ day, data=draft1971)
+```
+---
+
+``` r
+summ(draft71lm)
+```
+
+&lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Observations &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 365 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Dependent variable &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; rank &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Type &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; OLS linear regression &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt; &lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; F(1,363) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.07 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; R² &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Adj. R² &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt; &lt;table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Est. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; S.E. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; t val. &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; p &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; (Intercept) &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 180.39 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 11.08 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 16.28 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; day &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.05 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.27 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.79 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td style="padding: 0; " colspan="100%"&gt;
+&lt;sup&gt;&lt;/sup&gt; Standard errors: OLS&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;
+
+---
+
+&lt;img src="img/angrist.JPG" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### IV Natural Experiment
+
+**Definition:**
+1. "Nature" randomizes a cause of the treatment (`\(Z\)`).
+2. `\(Z\)` only affects `\(Y\)` through its effects on `\(X\)` (exclusion restriction).
+3. Treatment caused by `\(Z\)` has the same effect as treatment with any other cause.
+
+**Example:** Acemoglu, Johnson, and Robinson: Settler mortality as an instrument for institutional quality `\(\rightarrow\)` economic development.
+
+---
+
+### Qualitative Tasks for IV Natural Experiments
+
+- **Process trace backwards from the cause of the cause:** Why did settler mortality vary? Was it truly exogenous?
+- **Process trace forward from `\(Z\)` to `\(X\)`:** Does settler mortality *only* affect institutions, or does it also affect other pathways (e.g., disease environment `\(\rightarrow\)` human capital)?
+- **Process trace `\(X \rightarrow Y\)` in matched pairs:** Compare a country with high predicted institutions (low settler mortality) to one with low predicted institutions (high settler mortality). Trace the institutional mechanisms.
+
+---
+
+### Example: Acemoglu, Johnson, and Robinson (2001)
+
+&lt;img src="img/settlers1.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- `\(Z\)` Settler mortality
+- `\(X\)` Institutions (protection of property rights)
+- `\(Y\)` GDP per capita
+
+**Qualitative challenge:** Are there cases where settler mortality affected GDP through causal pathways other than institutions? Why?
+
+---
+
+### Regression-Discontinuity Design (RDD)
+
+**Definition:**
+1. There is an assignment variable `\(Z\)`.
+2. Cases assigned to treatment if and only if `\(Z \geq T\)` (threshold).
+3. Enough cases near the threshold for local comparison.
+
+**Key Assumption:** Units just above and just below `\(T\)` are exchangeable except for treatment.
+
+---
+
+### Qualitative Tasks for RDD
+
+- Assumptions 1 and 3 (threshold rule and density) can be checked quantitatively.
+- **Assumption 2 (no manipulation of `\(Z\)`):** Process trace the cause of the assignment variable.
+  - Who determines `\(Z\)`? Do actors know about the threshold? Can they game it?
+  - Interview policymakers, administrators, or subjects to verify no sorting around the cutoff.
+
+---
+
+### Example: Maimonides' Rule (Angrist and Lavy 1999)
+
+&gt; "Twenty-five children may be put in charge of one teacher. If the number in the class exceeds twenty-five but is not more than forty, he should have an assistant... If there are more than forty, two teachers must be appointed."
+
+- **$Z$:** Cohort enrollment count
+- **Thresholds:** 41, 81, 121 (class size divides)
+- **Treatment:** Actual class size
+
+---
+
+### Maimonides' Rule: The Discontinuity
+
+&lt;img src="img/maimonmath.jpeg" width="45%" style="display: block; margin: auto;" /&gt;
+
+---
+
+**Qualitative question:** Do principals manipulate enrollment counts to fall just below thresholds? Interview school administrators to verify.
+
+---
+
+### RDD Pitfalls
+
+RDD is not valid if:
+- Actors are aware of the discontinuity and adjust behavior (e.g., parents moving students to change cohort size).
+- The assignment variable is coarsely measured, so cases near the threshold are not actually close.
+
+**Qualitative research can help detect both problems.**
+
+---
+
+&lt;img src="img/Angrist2019title.PNG" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="img/Angrist2019-1.PNG" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="img/Angrist2019-2.PNG" width="85%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+### Case Selection for Natural Experiments
+
+| Design | Case Selection Strategy |
+|:-------|:------------------------|
+| Classic Natural Experiment | Extreme values of the cause; cases where mechanism is most visible |
+| IV Natural Experiment | Extreme values of the instrument (`\(Z\)`); surprising values of treatment (`\(X\)`) given `\(Z\)` |
+| RDD | Cases with "power or privilege"; those just above/below threshold; also cases far from threshold to test generalizability |
+
+---
+
+class: center, middle
+
+# Block 2: True Experiments and Multi-Method Integration
+
+---
+
+### Why Experiments Work
+
+Random assignment ensures:
+
+`\(\text{E}(Y_{i,1} | T_i = 1) \approx \text{E}(Y_{i,1} | T_i = 0)\)`
+
+`\(\text{E}(Y_{i,0} | T_i = 1) \approx \text{E}(Y_{i,0} | T_i = 0)\)`
+
+**There is a strong argument for some kind of causal inference.** 
+
+---
+##But what about:
+
+- Meaning of the treatment?
+- Measurement of the outcome?
+- Mechanisms/causal pathways?
+- Experimental and psychological realism?
+- Spillovers?
+- Exhaustiveness
+- Heterogeneity
+
+**Qualitative methods may contribute to these.**
+
+---
+
+### Example: Cross-Cutting Cleavages in Mali
+
+**Dunning and Harrison (2010):** Does cousinage (a cross-cutting traditional tie) reduce ethnic voting?
+
+- **Experiment:** Lab-in-the-field with Malian participants. Vignettes varied ethnicity and cousinage relationship of a candidate.
+- **Finding:** Cousinage significantly reduces ethnic bias in voting.
+
+**Video:** [Link to video](https://www.youtube.com/watch?v=LpjgD_zV0IY)
+
+---
+
+### Mali Cousinage: Results
+
+&lt;img src="img/cousinage5.jpg" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+**Qualitative knowledge:** Prior qualitative information facilitated this design, allowing construction of the treatment and interpretation of names as group proxies. This reflected not just the researchers' fieldwork but generations of prior ethnographic knowledge.
+
+---
+
+### Issues for Experiments: What Qualitative Work Can Address
+
+| Issue | Qualitative Approach |
+|:------|:---------------------|
+| Meaning of the treatment | Open-ended questions, think-aloud protocols |
+| Measurement of outcome | Cognitive interviews, differential item functioning analysis |
+| Networks / SUTVA violations | Ethnographic observation of participant interactions |
+| Exhaustiveness  | Interviews with non-compliers |
+| Moderation / heterogeneity | Case selection of "unusual" responders for follow-up |
+
+---
+
+### Experimental Realism
+
+&gt; "Experimental realism refers to impact in its most important sense: Do subjects believe the situation, problem, or issue they confront? Does it engage and interest them? Does it capture their attention?" (McDermott 2002: 333)
+
+---
+
+**Hypothetical qualitative method:** Immersive comparison of process inside and outside of experiment. Ask participants: *"What do you think about this information? What kind of agenda do you think this speaker has? Do you believe what you're being told about women's representation?"*
+
+---
+
+### Example: Anti-Americanism and Female Representation in Jordan
+
+**Bush and Jamal (2015):** Does foreign pressure undermine support for women's representation?
+
+- **Survey experiment:** Random sample of Jordanian adults.
+- **Control:** Information about quota for women in parliament.
+- **Treatment 1:** Adds mention of U.S. support for the quota.
+- **Treatment 2:** Adds mention of religious leaders' support.
+
+---
+
+### Jordan Experiment: Results
+
+&lt;img src="img/jordanwomenexperiment.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+- **Finding:** U.S. endorsement *reduces* support for women's representation among those with anti-American attitudes.
+- **Qualitative component didn't happen:** Why do you think that is? How does this change our feelings about the study?.
+
+---
+
+### SUTVA: Stable Unit Treatment Value Assumption
+
+**Definition:** One unit's treatment does not affect another unit's outcome.
+
+**Threat:** Spillover, contamination, network effects.
+
+**Qualitative detection:** Ethnographic observation during experiment. Are participants talking to each other? Are they aware of other treatment conditions?
+
+---
+
+### Example: Electoral Fraud in Russia (Enikolopov et al. 2013)
+
+- **Experiment:** Randomized assignment of independent observers to polling stations in Moscow.
+- **Finding:** Observers reduce fraud at treated stations.
+
+**SUTVA Concern:** Does placing observers at *some* stations displace fraud to *neighboring* unobserved stations?
+
+---
+
+### Russia Electoral Fraud: Spillover Map
+
+&lt;img src="img/russiaspillover.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+
+**Qualitative investigation:** Interviews with election officials and party operatives could have been used to find out what was happening here. Was fraud displaced via networks among party officials, which would be a SUTVA violation that we can correct via spatial econometrics once we understand the network? Or was the mechanism something else?
+
+---
+### Exhaustiveness
+
+
+- **Encouragement design:** We randomly assign an *encouragement* to take up a treatment, but actual treatment uptake is voluntary.
+- **Example:** Randomly mail some households information about a job training program. Some recipients enroll; some non-recipients enroll anyway.
+
+- **Instrumental Variables (IV) setup:**
+  - `\(Z\)`: Randomly assigned encouragement (instrument)
+  - `\(X\)`: Actual treatment received (endogenous)
+  - `\(Y\)`: Outcome of interest
+
+---
+
+### The Exhaustiveness Assumption
+
+**Exhaustiveness** (also called the **exclusion restriction**):
+
+&gt; The instrument `\(Z\)` affects the outcome `\(Y\)` **only through** its effect on the treatment `\(X\)`.
+
+---
+
+In an encouragement design, this means:
+
+- Receiving the encouragement (`\(Z = 1\)`) changes outcomes **only** because it increases the probability of taking up treatment (`\(X = 1\)`).
+- There are **no alternative pathways** from `\(Z\)` to `\(Y\)`.
+
+.pull-left[
+**Violation Example:**
+Mailing job training info (`\(Z\)`) may:
+- Increase self-efficacy ("Someone thinks I can do this!")
+- Prompt the recipient to search for other jobs
+
+These effects on `\(Y\)` are *not* mediated by program enrollment (`\(X\)`).
+]
+
+.pull-right[
+**Consequence:**
+IV estimate is biased—it captures the effect of the *encouragement* plus the effect of the *treatment*, not the treatment alone.
+]
+
+---
+
+### Testing Exhaustiveness Qualitatively
+
+**Why qualitative methods?**  
+The exclusion restriction cannot be tested using only the quantitative data. We must investigate the *process* by which `\(Z\)` operates.
+
+**Qualitative Strategies:**
+
+1. **Process trace the encouragement:**
+   - Interview participants: *"What did you think when you received the letter? Did it make you do anything besides consider the program?"*
+
+---
+
+2\. **Compare compliers and non-compliers:**
+   - Interview those who received `\(Z\)` but did **not** take up `\(X\)`. Did `\(Z\)` affect their outcomes directly?
+
+3\. **Ethnographic observation:**
+   - Observe how the encouragement is delivered and received. Does the messenger influence outcomes independently?
+
+**Key Question:** *"Can I tell a plausible story in which `\(Z\)` changes `\(Y\)` without changing `\(X\)`?"* If yes, exhaustiveness is threatened.
+
+---
+### Exhaustiveness and Emotion Treatments
+
+Suppose I want to encourage people in a political-science experiment to feel anger. Which of the below videos is more likely to meet the exhausiveness standard?
+
+
+.pull-left[
+
+&lt;img src="img/cryfreedom.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="img/mybodyguard.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+In selecting among these (and others), for use in an emotions-and-politics experiment in Peru, I set up focus groups where I asked participants to watch the clips from which the stills in the last slide were taken and discuss together their reactions. By recording the conversations, I can observe the effects of the treatments.
+
+---
+
+- Both of the videos in the last slide produced a lot of angry comments.
+- The video about South Africa produced a lot of political discourse about racism and police violence, as well.
+- The video about a teenage bully produced a lot of discussion about how mean teenagers are to each other, as well as personal memories.
+
+---
+
+### Tracing Causal Process in Experiments
+
+&gt; "Even when causal relationships are firmly established, demonstrating the mediating pathways is far more difficult—practically and conceptually—than is usually supposed." (Green, Ha, and Bullock 2010)
+
+---
+
+**Multi-Method Approach: Experimental Ethnography**
+
+&gt; "This strategy can achieve experiments that create both a strong 'black box' test of cause and effect and a rich distillation of how those effects happened inside that black box, person by person, case by case, and story by story." (Sherman and Strang 2004: 205)
+
+---
+
+### Process Tracing in Experiments: Practical Tools
+
+- **MouseLab / Process Tracing Software:** Track what information participants access before making decisions.
+- **Open-Ended Questions:** "Walk me through what you were thinking when you made that choice."
+- **Think-Aloud Protocols:** Participants verbalize thoughts in real time.
+- **Post-Experiment Interviews:** Semi-structured, exploring decision-making process.
+
+---
+
+### The Limits of Experimental Process Tracing
+
+- We still won't fully test mediation theories --- as we said on the first day, the assumptions for such a test are severe.
+- It is probably more useful to use these techniques as modes of hypothesis generation, and as ways of testing other assumptions we've discussed above.
+
+---
+
+### Case Selection for Experiments
+
+**Challenge:** Experiments have treatment and control groups. Which participants do we interview?
+
+| Goal | Case Selection Strategy |
+|:-----|:-----------------------|
+| Understand mechanism | "Typical" treatment and control cases (average treatment effect) |
+| Explore heterogeneity | Extreme responders (very large or very small treatment effects) |
+
+---
+
+### Case Selection for Experiments
+| Goal | Case Selection Strategy |
+|:-----|:-----------------------|
+| Diagnose non-compliance | Non-compliers in treatment group; always-takers in control |
+| Test SUTVA | Participants spatially or socially proximate to other treatment arms |
+| Test experimental realism | Random sample of participants for debriefing |
+
+---
+
+### Example: Ethnic Identity Experiment in Peru
+
+**Research Question:** Does populist discourse shift ethnic self-identification?
+
+**Design:**
+- Survey experiment in Peru (low recent populism, stable ethnic identification).
+- Treatments: Populist message, technocratic message, solidarity message.
+- Outcome: Social distance from indigenous man, Afro-Peruvian man, professional woman.
+
+---
+
+### Peru Experiment: Treatments
+
+**Populist Message:**
+&gt; "There is so much inequality in Peru because some powerful people who supposedly know best conspire with the government and transnational companies to steal the country's wealth for themselves. All of us who are part of the real Peruvian people are victims..."
+
+**Technocratic Message:**
+&gt; "There is so much inequality in Peru because we're still in the intermediate steps of economic development. We need time, patience, investment..."
+
+---
+
+### Peru Experiment: Treatments
+
+
+**Solidarity Message:**
+&gt; "There is so much inequality in Peru because our government has not done enough to support social and economic solidarity..."
+
+---
+
+### Peru Experiment: Social Distance Measures
+
+&lt;img src="img/Afroperuvian.jpg" width="30%" style="display: block; margin: auto;" /&gt;&lt;img src="img/Indigenousman.jpg" width="30%" style="display: block; margin: auto;" /&gt;&lt;img src="img/Femalelawyer.jpg" width="30%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Peru Experiment: Results
+
+| Social Distance From... | Effect Estimate | `\(p\)`-value |
+|:------------------------|:---------------:|:---------:|
+| Indigenous Man          | 2.11            | 0.034     | 
+| Afroperuvian Man        | 0.26            | 0.79      |
+| Professional Woman      | 0.50            | 0.59      |
+
+**Interpretation:** Populist message reduces social distance specifically toward indigenous people.
+
+**Qualitative follow-up:** In-depth interviews with participants who showed large shifts. What did the message mean to them? Did it activate latent ethnic solidarity?
+
+---
+
+### Case Selection Summary: Experiments
+
+| Goal | Select... |
+|:-----|:----------|
+| Test mechanism | Typical treatment/control cases |
+| Explore why treatment works for some | High-responders (large individual treatment effects) |
+| Explore why treatment fails | Low-responders, non-compliers |
+| Test SUTVA | Geographically clustered participants |
+| Test realism | Random debriefing sample |
+
+**Key Insight:** The "surprising causes" logic from Module 1 can be adapted: select cases with **surprising treatment effects** (large residuals from predicted individual treatment effect).
+
+---
+
+class: center, middle
+
+# Block 3: Hands-On Lab – IV/RDD Replication &amp; Experimental Design
+
+---
+
+### Lab Objectives
+
+1. Run an instrumental variables analysis (settler mortality `\(\rightarrow\)` democracy `\(\rightarrow\)` inequality).
+2. Run an RDD analysis (Maimonides' Rule).
+3. Identify assumptions and design qualitative follow-ups.
+4. Design a multi-method experiment from scratch.
+
+---
+
+### Part 1: IV Natural Experiment (Settler Mortality)
+
+
+``` r
+# Load data
+inequality &lt;- read.csv("data/inequality.csv")
+
+# Install and load sem package if needed
+# install.packages("sem")
+library(sem)
+
+# IV regression: Polity instrumented by SettlerMortality
+ineqtsls &lt;- tsls(Gini ~ Polity + GDP + Industry + FuelExports + CommunistLegacy, 
+                 ~ SettlerMortality + GDP + Industry + FuelExports + CommunistLegacy, 
+                 data = inequality)
+
+summary(ineqtsls)
+```
+
+---
+
+**Discussion Questions:**
+- What is the estimated effect of democracy on inequality?
+- What assumptions are required for this to be a valid causal estimate?
+- Which countries have extreme values of SettlerMortality? What would you look for in a case study of one of those countries?
+
+---
+
+### Part 2: RDD (Maimonides' Rule)
+
+
+``` r
+# Load data
+library(foreign)
+final4 &lt;- read.dta("data/final4.dta")
+final5 &lt;- read.dta("data/final5.dta")
+
+# Define Maimonides function
+maimonides.fun &lt;- function(cohortsize) {
+  ifelse(cohortsize &lt; 41, cohortsize,
+         ifelse(cohortsize &lt; 81, cohortsize/2,
+                cohortsize/3))
+}
+
+# Run IV regression for 4th grade math scores
+library(sem)
+rddtsls &lt;- tsls(avgmath ~ classize + c_size + tipuach, 
+                ~ I(maimonides.fun(c_size)) + c_size + tipuach, 
+                data = final4,
+                subset = final4$c_size %in% c(36:45, 76:85, 116:125))
+
+summary(rddtsls)
+```
+
+---
+
+**Discussion Questions:**
+- Is there evidence that smaller classes improve math scores?
+- What threats to validity exist? (Manipulation of cohort size? Other policies at the threshold?)
+- If you could interview one school principal, what would you ask?
+
+---
+
+### Part 3: Design a Multi-Method Experiment
+
+**Task (small groups, 30 minutes):**
+
+Choose one of the "impossible" topics below. Design an experiment that:
+1. Randomly assigns a treatment.
+2. Measures an outcome quantitatively.
+3. Includes a qualitative component (interviews, focus groups, think-alouds) to test **SUTVA**, **experimental realism**, or **causal mechanisms**.
+
+---
+
+**Topics:**
+- The effects of candidate gender on voter decision-making
+- The democratic peace hypothesis
+- Authoritarianism is a fixed personality trait
+- Climate change increases salience of ethnic politics
+- Social media makes people more polarized
+
+**Deliverable:** Be prepared to share your design in 5 minutes.
+
+---
+
+### Part 4: Qualitative Follow-Up for Your Experiment
+
+For the experiment you just designed, answer:
+
+1. **Which participants** would you select for in-depth interviews or focus groups? Why?
+2. **What questions** would you ask to test SUTVA?
+3. **What questions** would you ask to assess experimental realism?
+4. **What questions** would you ask to trace the causal mechanism?
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "ratio": "16:9",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
