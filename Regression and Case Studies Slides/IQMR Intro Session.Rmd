@@ -1,0 +1,185 @@
+---
+title: "Mixed- and Multi-Method Research"
+subtitle: "What's the Point?"
+author: "<large>Jaye Seawright</large>"
+institute: "<small>IQMR</small>"
+date: "June 14, 2026"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Can we actually do multi-method research? Or is the idea hopeless?
+
+
+---
+### Let's examine a case of multi-method research
+
+Why do some states in the U.S. have many fewer laws about labor than
+other states?
+
+
+---
+### Galvin and Seawright (2023)
+
+Probably it has something to do with unions?
+
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin1.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin2.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin3.jpg")
+```
+
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin4.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin5.jpg")
+```
+
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin6.jpg")
+```
+
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin7.jpg")
+```
+
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin8.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin9.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin10.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin11.jpg")
+```
+
+---
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("galvin12.jpg")
+```
+
+---
+
+Whether we think these authors got everything (or anything!) about the substance right, lets ask:
+
+  * Is there inferential work being done here with each methodological component that doesn't reduce to the other, or is one redundant?
+
+---
+### A Different Kind of Example
+
+Laitin and Fearon (2003) report statistical evidence of a connection
+between mountainous terrain and civil war.
+
+
+---
+### A Different Kind of Example
+
+Logit coefficients for the relationship range between 0.12 and 0.42.
+
+
+---
+### A Different Kind of Example
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("colombiamountains.jpg")
+```
+
+
+---
+### A Different Kind of Example
+
+Colombia experienced civil war through much of the 19th century
+
+
+---
+### A Different Kind of Example
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("laviolencia.jpg")
+```
+
+---
+### A Different Kind of Example
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("colombiafarc.jpg")
+```
+
+---
+### A Different Kind of Example
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("columbia_farc_02.jpg")
+```
+
+---
+### A Different Kind of Example
+
+```{r, echo = FALSE, out.width="50%", fig.retina = 1, fig.align='center'}
+include_graphics("bogota.jpg")
+```
+
+---
+
+### What Is Multi-Method Research?
+
+**Triangulation**  
+Combination of research designs from more than one methodological family, each aimed at providing *separate* answers to a research question.
+
+**Integrative Multi-Method Research**  
+Techniques drawn from more than one methodological family used in the course of answering a *single integrated* research question or testing a *single overarching* hypothesis.
